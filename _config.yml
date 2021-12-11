@@ -16,14 +16,14 @@ minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", 
 
 # Site Settings
 locale                   : "es-SPA"
-title                    : "j4ndr0 | Ciberseguridad & Hacking Ético"
+title                    : "Ciberseguridad & Hacking Ético"
 title_separator          : "-"
 name                     : "akaj4ndr0"
 description              : "Blog de ciberseguridad"
 url                      : "https://akaj4ndr0.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "akaj4ndr0/akaj4ndr0.github.io"   #"slemire/slemire.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-logo                     : #"/assets/images/masthead.png"
+#logo                     : #"/assets/images/masthead.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -78,7 +78,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : akaj4ndr0
+  username               : 
 facebook:
   username               :
   app_id                 :
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Javier Gonzalez"
   avatar           : "/assets/images/avatar.png"
-  bio              : "Pentester, Ethical Hacker at Atos IT / CPHE / "
+  bio              : "Pentester, Ethical Hacker at Atos IT / CPHE / OSINT / HACKING WIFI"
   location         : "Spain"
   email            : #"akaj4ndr0@gmail.com"
   uri              :
@@ -120,7 +120,7 @@ author:
   #keybase          : "snowscan"
   instagram        :
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/javier-gonzalez-sanchez-1998861b2/"  # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "javier-gonzalez-sanchez-1998861b2"  # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
