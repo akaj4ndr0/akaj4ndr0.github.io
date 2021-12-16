@@ -1,10 +1,10 @@
 main:
   - title: "Home"
     url: /
-  - title: "Artículos"
+  - title: "Proyecto"
+    url: /proyecto/
+  - title: "Articulos"
     url: /year-archive/
-  - title: "Categorías"
-    url: /categories/
   - title: "Buscador"
     url: /buscador/
   - title: "About me"
