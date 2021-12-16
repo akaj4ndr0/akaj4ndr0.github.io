@@ -1,5 +1,5 @@
 # Welcome to Jekyll!
-#
+
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes@4.15.1"
-minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "haxor" #"dark", "aqua", "air", "contrast", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "es-SPA"
-title                    : "Ciberseguridad & Hacking Ético"
+title                    : "CiberBlog"
 title_separator          : "-"
-name                     : "akaj4ndr0"
+name                     : "Javier González"
 description              : "Blog de ciberseguridad"
 url                      : "https://akaj4ndr0.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Javier Gonzalez"
   avatar           : "/assets/images/avatar.png"
-  bio              : "Pentester, Ethical Hacker at Atos IT / CPHE / OSINT / HACKING WIFI"
+  bio              : "Pentester, Ethical Hacker at Atos IT / CPHE / OSINT / HACKING WIFI / CREADOR DE CONTENIDO"
   location         : "Spain"
   email            : #"akaj4ndr0@gmail.com"
   uri              :
@@ -270,3 +270,4 @@ defaults:
       comments: false
       share: false
       related: true
+      show_date: true

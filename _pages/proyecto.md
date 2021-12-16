@@ -5,10 +5,9 @@ permalink: /proyecto/
 author_profile: true
 ---
 
-Este proyecto nace de la necesidad de querer compartir mi experiencia en el ámbito de la ciberseguridad.
+Este proyecto pretende dar continuidad a mi experiencia personal en el [Programa #Include](../include), aportando mi experiencia y conocimientos adquiridos durante estos primeros pasos en el
+ámbito de la ciberseguridad.
 
-Pretende ser una continuidad al [Programa #Include](https://akaj4ndr0.github.io/include/), aportando mi experiencia y conocimientos adquiridos
-Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. 
 El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". 
 Estos textos hacen parecerlo un español que se puede leer. 
 
