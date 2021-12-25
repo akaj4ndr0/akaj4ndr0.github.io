@@ -38,7 +38,7 @@ Mi nombre es Javier González, actualmente trabajo como pentester en Atos IT des
 
 ## Contacto
 
-¿Quieres ponerte en contacto conmigo?, puedes hacerlo a través de la dirección de correo `akaj4ndr0@gmail.com`.
+¿Quieres ponerte en contacto conmigo?, puedes hacerlo a través de la dirección de correo `aka.j4ndr0@gmail.com`.
 
 
 
