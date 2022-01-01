@@ -9,7 +9,13 @@ classes: wide
 
 El primer paso para crear nuestro laboratorio es descargarnos [Virtual Box](https://www.virtualbox.org/wiki/Downloads), un software de virtualización para crear máquinas virtuales
 con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina virtual con cualquier otro sistema operativo
-sin necesidad de crear particiones en tu propio equipo. Una vez descargado, ejecuta el archivo e instálalo.
+sin necesidad de crear particiones en tu propio equipo.
+
+Una vez instalado, sigues estos pasos para configurar una red NAT. En el menú archivo de Virtual Box, elige Preferencias, y en la opción Red crear una nueva red NAT.
+
+<p><center><img src="../assets/images/laboratorio/preferencias.png"></center></p>
+<p><center><img src="../assets/images/laboratorio/crear-red.png"></center></p>
+
 
 ## Descarga la imagen Kali
 
@@ -26,7 +32,7 @@ Ejecuta el software de virtualización Virtual Box y elige la pestaña <strong><
 
 <img src="../assets/images/laboratorio/maquinakali1.png">
 
-A continuación pon nombre a tu máquina virtual, escribe Linux en la opción tipo, y elige la versión de Debian (64-bit).
+A continuación da un nombre a tu máquina virtual, escribe Linux en la opción Tipo, y elige la versión de Debian (64-bit).
 
 <p><center><img src="../assets/images/laboratorio/maquinakali2.png"></center></p>
 
@@ -127,6 +133,11 @@ Para poder compartir el portapapeles y poder arrastrar y soltar entre el equipo 
 <p><center><img src="../assets/images/laboratorio/maquinakali32.png"></center></p>
 <p><center><img src="../assets/images/laboratorio/maquinakali33.png"></center></p>
 
+No te olvides de configurar el adaptador de red de la máquina. Para ello apaga la máquina y desde el menú configuración, en red selecciona la opción red NAT y como nombre la que creamos en el paso
+de instalación de Virtuabl Box.
+
+<p><center><img src="../assets/images/laboratorio/asignar-red.png"></center></p>
+
 ## Instalación de la máquina Metasploitable
 
 Metasploitable es una máquina virtual Linux creada intencionalmente vulnerable. Esta máquina virtual se puede utilizar para probar herramientas
@@ -145,7 +156,7 @@ Ahora selecciona la opción "Usar un archivo de disco duro virtual existente" y 
 
 <p><center><img src="../assets/images/laboratorio/metasploitable3.png"></center></p>
 
-Añade el archivo con extensión .vmdk que encontrarñas en la ruta donde descomprimistes el archivo .zip de metasploitable2.
+Añade el archivo con extensión .vmdk que encontrarás en la ruta donde descomprimistes el archivo .zip de metasploitable2.
 
 <p><center><img src="../assets/images/laboratorio/metasploitable4.png"></center></p>
 
@@ -155,3 +166,4 @@ Ahora ya puedes iniciar la máquina, el usuario y contraseña para acceder es <s
 
 ¡¡¡ Hemos acabado !!! Ya tienes un laboratorio para realizar pruebas de seguridad y hacer Hacking de forma segura.
 
+Configura el adaptador de red como hicimos en la máquina Kali.
