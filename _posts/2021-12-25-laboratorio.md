@@ -11,7 +11,7 @@ El primer paso para crear nuestro laboratorio es descargarnos [Virtual Box](http
 con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina virtual con cualquier otro sistema operativo
 sin necesidad de crear particiones en tu propio equipo.
 
-Una vez instalado, sigues estos pasos para configurar una red NAT. En el menú archivo de Virtual Box, elige Preferencias, y en la opción Red crear una nueva red NAT.
+Una vez instalado, sigues estos pasos para configurar una red NAT, que usaremos en las máquinas virtuales que instalaremos más adelante. En el menú archivo de Virtual Box, elige Preferencias, y en la opción Red crear una nueva red NAT.
 
 <p><center><img src="../assets/images/laboratorio/preferencias.png"></center></p>
 <p><center><img src="../assets/images/laboratorio/crear-red.png"></center></p>
