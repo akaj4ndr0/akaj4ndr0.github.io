@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-05T16:19:07+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Nmap y pa’ dentro</title><link href="http://localhost:4000/nmap/" rel="alternate" type="text/html" title="Nmap y pa’ dentro" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/nmap</id><content type="html" xml:base="http://localhost:4000/nmap/">&lt;h2 id=&quot;-qué-es-nmap-&quot;&gt;¿ Qué es Nmap ?&lt;/h2&gt;
+
+&lt;p&gt;Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo.
+Nmap viene instalado por defecto en Kali Linux.&lt;/p&gt;
+
+&lt;h2 id=&quot;port-scanner&quot;&gt;Port Scanner&lt;/h2&gt;
+
+&lt;p&gt;Como hemos mencionado, con Nmap podemos ver que puertos están abiertos en un determinado host, y ver que servicios se están ejecutando.
+Existen un total de 65536 puertos, que van desde el 0 al 65535. Los puertos que van desde el 0 al 1023 son los puertos bien conocidos (en inglés, well-known ports).
+Existe un estándar de asignación de puertos que los divide en tres grupos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;0 - 1023. Están reservados para el sisteman operativo y los protocolos más importantes. Por ejemplo 21 FTP, 22 SSH, 80 HTTP.&lt;/li&gt;
+  &lt;li&gt;1024 - 49151. Son los puertos registrados, los que se utilizan por las aplicaciones que se instalan en el ordenador.&lt;/li&gt;
+  &lt;li&gt;49152 - 65535. Son los puertos dinámicos o privados, los que corresponden a las aplicaciones que necesitan conectarse a un servidor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ejemplos-prácticos-con-nmap&quot;&gt;Ejemplos prácticos con Nmap&lt;/h2&gt;
+
+&lt;p&gt;Nmap puede identificar los dispositivos en una red, detectar el sistema opertativo de un host, y determinar que servicios se están ejecutando. Aquí vamos a centrarnos en descubrir qué
+puertos y servicios se están ejecutando en la máquina vulnerable Metasploitable2. Si aún no has creado el laboratorio de pruebas, te dejo este &lt;a href=&quot;../laboratorio&quot;&gt;enlace&lt;/a&gt; para crearlo paso a paso.&lt;/p&gt;
+
+&lt;p&gt;Ejecuta el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ip a&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt; desde la terminal en cada una de las máquinas para ver la dirección IP asignada.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/ip-kali.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/ip-metasploitable.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora tenemos las IPs de nuestras máquinas, en mi caso la 10.0.2.15 para Kali y la 10.0.2.5 para Metasploitable2.&lt;/p&gt;
+
+&lt;p&gt;El escaneo más básico para el reconocimiento de puertos con nmap es el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap ip_objetivo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-basic.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos observar en la parte inferior derecha el tiempo que tomó nmap para el escaneo de puertos: 13.09s. Ahora bien, con el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-n&lt;/code&gt; de nmap podemos reducir el tiempo de scaneo. Este parámetro hace
+que nmap no realice resolución DNS lo que reduce bastante el tiempo.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-n.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;De forma predeterminada nmap solo escanea los 1000 puertos más comunes para cada protocolo. Con el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-p&lt;/code&gt; podemos indicar qué puertos queremos escanear separados por coma. Para indicar que queremos escanear todos los puertos
+podemor ejecutar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap -n -p- ip_objetivo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-allports.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Para ver las versiones de los servicios que se están ejecutando usamos el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sV&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-versiones.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora Nmap muestra otra columna “VERSION”, con información de las versiones de los servicios. Esta información es muy valiosa para ver versiones vulnerables de los servicos que se ejecutan.&lt;/p&gt;
+
+&lt;p&gt;Podemos guardar los resultados del scaneo para tenerlos siempre a mano y no tener que volver a ejecutar nmap sobre el host objetivo. Nmap puede guardar la salida del comando en varios formatos,
+seguido del nombre del archivo de salida.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Salida normal (-oN).&lt;/li&gt;
+  &lt;li&gt;Salida XML (-oX).&lt;/li&gt;
+  &lt;li&gt;Salida grepeable (-oG).&lt;/li&gt;
+  &lt;li&gt;Salida en todos los formatos (-oA).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nmap tiene una infinidad de opciones que aquí no os he mostrado. Si quieres seguir investigando sobre esta herramienta te dejo por aquí el enlace a su página oficial, &lt;a href=&quot;https://nmap.org/&quot;&gt;nmap&lt;/a&gt;.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Uso y ejemplos de la herramienta Nmap</summary></entry><entry><title type="html">Que no te lo cuenten. Ataque Zero-Day</title><link href="http://localhost:4000/quenotelocuentem/" rel="alternate" type="text/html" title="Que no te lo cuenten. Ataque Zero-Day" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuentem</id><content type="html" xml:base="http://localhost:4000/quenotelocuentem/">&lt;h2 id=&quot;-qué-es-un-ataque-zero-day-&quot;&gt;¿ Qué es un ataque Zero-Day ?&lt;/h2&gt;
+
+&lt;p&gt;Un &lt;strong&gt; Ataque Zero-Day&lt;/strong&gt; es un ciberataque contra una aplicación o sistema que tiene como objetivo la ejecución de código
+malicioso gracias al conocimiento de una vulnerabilidad desconocida por el fabricante del producto; lo que supone que
+el fabricante del producto aún no ha corregido dicha vulnerabilidad.&lt;/p&gt;
+
+&lt;p&gt;Stuxnet es uno de los ejemplos más famosos de un ataque de día cero (Zero-Day). Se descubrió por primera vez en 2010. Este gusano informático malicioso
+fue famoso porque atacó los equipos digitales que controlan la producción de uranio enriquecido, usado para crear armas nucleares.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">¿Qué es un ataque Zero-Day?. Que no te lo cuenten.</summary></entry><entry><title type="html">Configuración del laboratorio de pruebas</title><link href="http://localhost:4000/laboratorio/" rel="alternate" type="text/html" title="Configuración del laboratorio de pruebas" /><published>2021-12-25T00:00:00+01:00</published><updated>2021-12-25T00:00:00+01:00</updated><id>http://localhost:4000/laboratorio</id><content type="html" xml:base="http://localhost:4000/laboratorio/">&lt;h2 id=&quot;instalación-de-virtual-box&quot;&gt;Instalación de Virtual Box&lt;/h2&gt;
+
+&lt;p&gt;El primer paso para crear nuestro laboratorio es descargarnos &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtual Box&lt;/a&gt;, un software de virtualización para crear máquinas virtuales
+con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina virtual con cualquier otro sistema operativo
+sin necesidad de crear particiones en tu propio equipo.&lt;/p&gt;
+
+&lt;p&gt;Una vez instalado, sigues estos pasos para configurar una red NAT, que usaremos en las máquinas virtuales que instalaremos más adelante. En el menú archivo de Virtual Box, elige Preferencias, y en la opción Red crear una nueva red NAT.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/preferencias.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/crear-red.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;descarga-la-imagen-kali&quot;&gt;Descarga la imagen Kali&lt;/h2&gt;
+
+&lt;p&gt;Kali Linux es una distribución basada en Debian GNU/Linux diseñada especialmente para la auditoría y seguridad informática. Desde la página oficial de &lt;a href=&quot;https://www.kali.org/get-kali/#kali-bare-metal&quot;&gt;Kali-Linux&lt;/a&gt; descarga el instalador de kali eligiendo la opción Bare Metal.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/laboratorio/instalador-kali.png&quot; alt=&quot;instalador&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/laboratorio/instalador-kali2.png&quot; alt=&quot;instalador&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;instalación-de-la-máquina-virtual-kali&quot;&gt;Instalación de la máquina virtual Kali&lt;/h2&gt;
+
+&lt;p&gt;Una vez instalado Virtual Box y descargada la imagen de Kali, vamos a instalar Kali en nuestro equipo.
+Ejecuta el software de virtualización Virtual Box y elige la pestaña &lt;strong&gt;&lt;i&gt;Nueva&lt;/i&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A continuación da un nombre a tu máquina virtual, escribe Linux en la opción Tipo, y elige la versión de Debian (64-bit).&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali2.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Elige la cantidad de memoria RAM reservada para la máquina virtual según las características de tu equipo anfitrión.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali3.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Deja las siguientes opciones por defecto.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali4.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali5.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali6.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;A continuación asigna el espacio del disco duro virtual que tendrá la máquina.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali7.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora vamos a configurar algunos aspectos de la máquina virtual.&lt;/p&gt;
+
+&lt;p&gt;En la pestaña &lt;strong&gt;&lt;i&gt; Configuración &lt;/i&gt;&lt;/strong&gt; haz click sobre &lt;strong&gt;&lt;i&gt; Sistema &lt;/i&gt;&lt;/strong&gt; y desmarca la casilla &lt;strong&gt;&lt;i&gt;Disquete&lt;/i&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali8.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;En la pestaña &lt;strong&gt;&lt;i&gt; Procesador &lt;/i&gt;&lt;/strong&gt; elige el número de procesadores según las características de tu equipo anfitrión.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali9.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;A continuación en la opción &lt;strong&gt;&lt;i&gt; Almacenamiento &lt;/i&gt;&lt;/strong&gt; haz click sobre el icono del CD y selecciona el disco virtual óptico en la ruta de descarga de la imagen iso de Kali.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali10.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez configurada la máquina haz click sobre la pestaña &lt;strong&gt;&lt;i&gt; Iniciar &lt;/i&gt;&lt;/strong&gt; y comenzará la instalación de Kali.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali11.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali12.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Selecciona el idioma y la ubicación.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali13.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali14.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Asigna un nombre a la máquina.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali15.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Deja la siguiente casilla en blanco.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali16.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Escribe el nombre completo del usuario.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali17.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Y escribe el nombre del usuario para la nueva cuenta y asignale una contraseña.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali18.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali19.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Las siguiente opciones déjalas por defecto.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali20.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali21.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali22.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali23.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali24.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Marca la opción &lt;strong&gt;&lt;i&gt;Sí&lt;/i&gt;&lt;/strong&gt; y dale a continuar.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali25.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;En la siguiene panatalla deja todas las opciones por defecto y dale a continuar.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali26.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora marca la opción &lt;strong&gt;&lt;i&gt;Sí&lt;/i&gt;&lt;/strong&gt; y continúa con la instalación.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali27.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;A continuación marca la segunda opción.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali28.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Dale a continuar y la instalación se habrá completado.&lt;/p&gt;
+
+&lt;p&gt;Inicia sesión con el usuario de la nueva cuenta y la contraseña asignada.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali30.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;¡¡¡Ya tienes Kali Linux instalado en tu equipo!!!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali31.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Para poder compartir el portapapeles y poder arrastrar y soltar entre el equipo anfitrión y la máquina virtualizada haz lo siguiente.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali32.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali33.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;No te olvides de configurar el adaptador de red de la máquina. Para ello apaga la máquina y desde el menú configuración, en red selecciona la opción red NAT y como nombre la que creamos en el paso
+de instalación de Virtuabl Box.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/asignar-red.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;instalación-de-la-máquina-metasploitable&quot;&gt;Instalación de la máquina Metasploitable&lt;/h2&gt;
+
+&lt;p&gt;Metasploitable es una máquina virtual Linux creada intencionalmente vulnerable. Esta máquina virtual se puede utilizar para probar herramientas
+de seguridad y practicar hacking de modo seguro. Puedes descargar la máquina desde este &lt;a href=&quot;https://sourceforge.net/projects/metasploitable/files/Metasploitable2/&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una vez descargado, descomprime el archivo y abre el software de virtualización Virtual Box. Haz click sobre la pestaña &lt;strong&gt;&lt;i&gt;Nueva&lt;/i&gt;&lt;/strong&gt; y asígnale un nombre
+a la máquina virtual. Elige Linux en la opción Tipo y como versión elige Other Linux (64-bit).&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable1.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Asigna la memoria RAM según las características de tu equipo anfitrión.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable2.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora selecciona la opción “Usar un archivo de disco duro virtual existente” y haz click sobre el icono carpeta.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable3.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Añade el archivo con extensión .vmdk que encontrarás en la ruta donde descomprimistes el archivo .zip de metasploitable2.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable4.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora ya puedes iniciar la máquina, el usuario y contraseña para acceder es &lt;strong&gt;&lt;i&gt;msfadmin&lt;/i&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable6.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;¡¡¡ Hemos acabado !!! Ya tienes un laboratorio para realizar pruebas de seguridad y hacer Hacking de forma segura.&lt;/p&gt;
+
+&lt;p&gt;Configura el adaptador de red como hicimos en la máquina Kali.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">En esta sección encontrarás todo lo necesario para crear un laboratorio para pruebas de pentesting.</summary></entry><entry><title type="html">Programa #Include</title><link href="http://localhost:4000/include/" rel="alternate" type="text/html" title="Programa #Include" /><published>2021-12-16T00:00:00+01:00</published><updated>2021-12-16T00:00:00+01:00</updated><id>http://localhost:4000/include</id><content type="html" xml:base="http://localhost:4000/include/">&lt;h2 id=&quot;la-fundación-goodjob&quot;&gt;La Fundación GoodJob&lt;/h2&gt;
+
+&lt;p&gt;La Fundación GoodJob desarrolla el Programa #Include con el objetivo de formar en seguridad informática a personas con discapacidad.
+Se trata de un programa de empleabilidad gratuito, que se desarrolla de forma online, destinado a desarrollar competencias en el sector de la ciberseguridad, 
+una de las profesiones más innovadoras y con más demanda de empleo en la actualidad.&lt;/p&gt;
+
+&lt;p&gt;El Programa #Include cuenta con la colaboración de varias instituciones:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;El Instituto Nacional de Ciberseguridad&lt;/li&gt;
+  &lt;li&gt;El Centro Criptológico Nacional&lt;/li&gt;
+  &lt;li&gt;La Comunidad de Madrid&lt;/li&gt;
+  &lt;li&gt;La Generalitat de Catalunya&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La primera edición del programa se realizó entre Mayo y Junio de 2020, y hasta la fecha se han realizado cuatro ediciones.
+El programa ha sido un éxito rotundo, consiguiento integrar a más del 80% de los alumnos en empresas colaboradoras, entre las que se incluyen Atos, Telefónica, s21sec, entre otras.&lt;/p&gt;
+
+&lt;p&gt;Se espera que durante los próximos años se realicen varias ediciones y que el número de empresas colaboradoras siga creciendo.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Conoce el programa #Include creado por la Fundación GoodJob.</summary></entry></feed>
