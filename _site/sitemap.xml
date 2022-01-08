@@ -13,8 +13,12 @@
 <lastmod>2022-01-01T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/quenotelocuentem/</loc>
+<loc>http://localhost:4000/quenotelocuentem2/</loc>
 <lastmod>2022-01-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/burpsuite/</loc>
+<lastmod>2022-01-07T00:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/404/</loc>

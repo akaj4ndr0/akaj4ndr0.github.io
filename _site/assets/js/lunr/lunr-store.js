@@ -17,5 +17,10 @@ var store = [{
         "title": "Que no te lo cuenten. Ataque Zero-Day",
         "excerpt":"¿ Qué es un ataque Zero-Day ? Un Ataque Zero-Day es un ciberataque contra una aplicación o sistema que tiene como objetivo la ejecución de código malicioso gracias al conocimiento de una vulnerabilidad desconocida por el fabricante del producto; lo que supone que el fabricante del producto aún no ha...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/quenotelocuentem/",
+        "url": "http://localhost:4000/quenotelocuentem2/",
+        "teaser":null},{
+        "title": "Burp Suite",
+        "excerpt":"¿ Qué es Burp Suite ? Burp Suite es considerada la navaja suiza del pentester. Es una herramienta utilizada en auditorías de seguridad de aplicaciones Web. Un proxy de interceptación para el análisis y edición del tráfico Web. Con Burp Suite se pueden interceptar las peticiones y respuestas, leerlas y...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/burpsuite/",
         "teaser":null}]

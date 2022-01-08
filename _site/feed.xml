@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-05T16:19:07+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Nmap y pa’ dentro</title><link href="http://localhost:4000/nmap/" rel="alternate" type="text/html" title="Nmap y pa’ dentro" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/nmap</id><content type="html" xml:base="http://localhost:4000/nmap/">&lt;h2 id=&quot;-qué-es-nmap-&quot;&gt;¿ Qué es Nmap ?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-08T20:02:43+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Burp Suite</title><link href="http://localhost:4000/burpsuite/" rel="alternate" type="text/html" title="Burp Suite" /><published>2022-01-07T00:00:00+01:00</published><updated>2022-01-07T00:00:00+01:00</updated><id>http://localhost:4000/burpsuite</id><content type="html" xml:base="http://localhost:4000/burpsuite/">&lt;h2 id=&quot;-qué-es-burp-suite-&quot;&gt;¿ Qué es Burp Suite ?&lt;/h2&gt;
+
+&lt;p&gt;Burp Suite es considerada la navaja suiza del pentester. Es una herramienta utilizada en auditorías de seguridad de aplicaciones Web. Un proxy de interceptación
+para el análisis y edición del tráfico Web. Con Burp Suite se pueden interceptar las peticiones y respuestas, leerlas y editarlas en tiempo real antes de que lleguen
+a su destino final.&lt;/p&gt;
+
+&lt;p&gt;Burp Suite se encuentra desarrollado y soportado por la empresa PortSwigger LTD. Existe una versión gratuita (Community Edition) y una de pago (Professional Edition).
+Kali Linux trae por defecto la versión gratuita de Burp Suite. Si aún no tienes instalado Kali puedes seguir los pasos de instalación en este &lt;a href=&quot;../laboratorio&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;configuración-inicial-burp-suite&quot;&gt;Configuración inicial Burp Suite&lt;/h2&gt;
+
+&lt;p&gt;Puedes abrir Burp desde la terminal con el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;burpsuite&lt;/code&gt;. Una vez iniciado asegúrate de que el proxy esté escuchando en el puerto &lt;strong&gt;8080&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Te recomiendo que instales la extensión &lt;a href=&quot;https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/&quot;&gt;FoxyProxy&lt;/a&gt; para Firefox. Esta extensión te permite configurar el proxy del navegador de una forma más rápida.&lt;/p&gt;
+
+&lt;p&gt;Una vez instalada, abre la extensión y sigue estos pasos para configurar el proxy de tal forma que las peticiones pasen por Burp Suite.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy4.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora puedes activar o desactivar el proxy Burp Suite desde la extensión cuando quieras.&lt;/p&gt;
+
+&lt;p&gt;Otro paso importante es instalar en el navegador el certificado de Burp Suite (Firefox). Para ello escribe la siguiente direccion en el navegador &lt;a href=&quot;http://burpsuite/&quot;&gt;http://burpsuite/&lt;/a&gt; con el proxy activado.&lt;/p&gt;
+
+&lt;p&gt;Descarga el certificado y sigue los siguientes pasos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En ajustes del navegador, busca los certificados instalados.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Elige la opción importar y selecciona el fichero con extensión .der descargado.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy4.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy5.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Marca las dos casillas de la ventana emergente y pulsa ok.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy6.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;¡Bien hecho!. Ya tienes configurado Burp Suite para dar los primeros pasos, vamos a ello.&lt;/p&gt;
+
+&lt;p&gt;Cada vez que inicies Burp Suite, el Intercept del proxy está en ON, esto significa que si quieres navegar por la página web tendrás que hacer click en Forward para que la petición llegue a su destino
+y continuar la navegación. Puedes desactivar el Intercept y navegar por la Web y activarlo cuando quieras ver o editar la petición.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/intercept_on.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Otra opción interesante es la pestaña HTTP history de proxy, la cual muestra el historial de las peticiones.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/history_proxy.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Es recomendable asignar el Scope en la pestaña Target de Burp Suite.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/target.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Esto evitará a que se muestre en el historial las peticiones que no estén dentro del Scope a analizar.&lt;/p&gt;
+
+&lt;p&gt;Cuando le des a aceptar se mostrará una ventana emergente. Dale a YES para que Burp no registre otras URLs distintas al objetivo en el historial.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/target2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hasta aquí una primera visión de Burp Suite. En próximos artículos iremos viendo que opciones nos trae esta herramienta imprescindible para auditorías Web.&lt;/p&gt;
+
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Burp Suite, la navaja suiza del pentester.</summary></entry><entry><title type="html">Nmap y pa’ dentro</title><link href="http://localhost:4000/nmap/" rel="alternate" type="text/html" title="Nmap y pa’ dentro" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/nmap</id><content type="html" xml:base="http://localhost:4000/nmap/">&lt;h2 id=&quot;-qué-es-nmap-&quot;&gt;¿ Qué es Nmap ?&lt;/h2&gt;
 
 &lt;p&gt;Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo.
 Nmap viene instalado por defecto en Kali Linux.&lt;/p&gt;
@@ -57,7 +127,7 @@ seguido del nombre del archivo de salida.&lt;/p&gt;
   &lt;li&gt;Salida en todos los formatos (-oA).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Nmap tiene una infinidad de opciones que aquí no os he mostrado. Si quieres seguir investigando sobre esta herramienta te dejo por aquí el enlace a su página oficial, &lt;a href=&quot;https://nmap.org/&quot;&gt;nmap&lt;/a&gt;.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Uso y ejemplos de la herramienta Nmap</summary></entry><entry><title type="html">Que no te lo cuenten. Ataque Zero-Day</title><link href="http://localhost:4000/quenotelocuentem/" rel="alternate" type="text/html" title="Que no te lo cuenten. Ataque Zero-Day" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuentem</id><content type="html" xml:base="http://localhost:4000/quenotelocuentem/">&lt;h2 id=&quot;-qué-es-un-ataque-zero-day-&quot;&gt;¿ Qué es un ataque Zero-Day ?&lt;/h2&gt;
+&lt;p&gt;Nmap tiene una infinidad de opciones que aquí no os he mostrado. Si quieres seguir investigando sobre esta herramienta te dejo por aquí el enlace a su página oficial, &lt;a href=&quot;https://nmap.org/&quot;&gt;nmap&lt;/a&gt;.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Uso y ejemplos de la herramienta Nmap</summary></entry><entry><title type="html">Que no te lo cuenten. Ataque Zero-Day</title><link href="http://localhost:4000/quenotelocuentem2/" rel="alternate" type="text/html" title="Que no te lo cuenten. Ataque Zero-Day" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuentem2</id><content type="html" xml:base="http://localhost:4000/quenotelocuentem2/">&lt;h2 id=&quot;-qué-es-un-ataque-zero-day-&quot;&gt;¿ Qué es un ataque Zero-Day ?&lt;/h2&gt;
 
 &lt;p&gt;Un &lt;strong&gt; Ataque Zero-Day&lt;/strong&gt; es un ciberataque contra una aplicación o sistema que tiene como objetivo la ejecución de código
 malicioso gracias al conocimiento de una vulnerabilidad desconocida por el fabricante del producto; lo que supone que
