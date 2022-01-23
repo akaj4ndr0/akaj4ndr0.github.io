@@ -23,4 +23,9 @@ var store = [{
         "excerpt":"¿ Qué es Burp Suite ? Burp Suite es considerada la navaja suiza del pentester. Es una herramienta utilizada en auditorías de seguridad de aplicaciones Web. Un proxy de interceptación para el análisis y edición del tráfico Web. Con Burp Suite se pueden interceptar las peticiones y respuestas, leerlas y...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/burpsuite/",
+        "teaser":null},{
+        "title": "Que no te lo cuenten. OWASP",
+        "excerpt":"¿ Qué es el proyecto OWASP ? OWASP (Open Web Application Security Proyect), es un proyecto abierto de seguridad de aplicaciones Web. La comunidad OWASP está formada por empresas, organizaciones educativas y particulares de todo el mundo. Proporciona una base para probar los controles técnicos de seguridad de las aplicaciones...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/quenotelocuenOwasp/",
         "teaser":null}]
