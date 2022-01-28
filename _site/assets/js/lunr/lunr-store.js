@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"¿ Qué es el proyecto OWASP ? OWASP (Open Web Application Security Proyect), es un proyecto abierto de seguridad de aplicaciones Web. La comunidad OWASP está formada por empresas, organizaciones educativas y particulares de todo el mundo. Proporciona una base para probar los controles técnicos de seguridad de las aplicaciones...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/quenotelocuenOwasp/",
+        "teaser":null},{
+        "title": "Scripting en Python I - argparse",
+        "excerpt":"Python3 - argparse Este post pretende ser una introducción al módulo argparse de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para construir procesadores de argumentos y opciones de línea de comando. Para poder usar argparse lo primero que hay que hacer es importar...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/pythonI-argparse/",
         "teaser":null}]

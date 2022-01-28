@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 title: "Configuración del laboratorio de pruebas"
 excerpt: "En esta sección encontrarás todo lo necesario para crear un laboratorio para pruebas de pentesting." 
 date: 2021-12-25

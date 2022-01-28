@@ -104,7 +104,7 @@
 
   </head>
 
-  <body class="layout--single wide">
+  <body class="layout--splash wide">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -143,181 +143,15 @@
     <div class="initial-content">
       
 
-
-  
-    
-
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Nmap y pa' dentro</li>
-      
-    
-  </ol>
-</nav>
-
-  
-
-
 <div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person">
-
-  
-    <div class="author__avatar">
-      
-
-      
-        <img src="/assets/images/avatar.png" alt="Javier Gonzalez" itemprop="image">
-      
-    </div>
-  
-
-  <div class="author__content">
-    
-      <h3 class="author__name" itemprop="name">Javier Gonzalez</h3>
-    
-    
-      <p class="author__bio" itemprop="description">
-        Pentester, Ethical Hacker at Atos IT / CPHE / OSINT / HACKING WIFI / CREADOR DE CONTENIDO
-      </p>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Spain</span>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://twitter.com/akaj4ndr0" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://www.linkedin.com/in/javier-gonzalez-sanchez-1998861b2" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-        <li>
-          <a href="https://github.com/akaj4ndr0" itemprop="sameAs" rel="nofollow noopener noreferrer">
-            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Nmap y pa’ dentro">
     <meta itemprop="description" content="Uso y ejemplos de la herramienta Nmap">
     <meta itemprop="datePublished" content="January 01, 2022">
     
 
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Nmap y pa’ dentro
-</h1>
-          
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        
-        <p class="page__meta">
-          
-            <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2022-01-01T00:00:00+01:00">January 01, 2022 </time>&emsp;
-          
-          
-        </p>
-        <h2 id="-qué-es-nmap-">¿ Qué es Nmap ?</h2>
+    <section class="page__content" itemprop="text">
+      <h2 id="-qué-es-nmap-">¿ Qué es Nmap ?</h2>
 
 <p>Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo.
 Nmap viene instalado por defecto en Kali Linux.</p>
@@ -341,28 +175,29 @@ puertos y servicios se están ejecutando en la máquina vulnerable Metasploitabl
 
 <p>Ejecuta el comando <code class="language-plaintext highlighter-rouge">ip a</code> o <code class="language-plaintext highlighter-rouge">ifconfig</code> desde la terminal en cada una de las máquinas para ver la dirección IP asignada.</p>
 
-<p><center><img src="../assets/images/nmap/ip-kali.png" /></center></p>
-<p><center><img src="../assets/images/nmap/ip-metasploitable.png" /></center></p>
+<p><img src="../assets/images/nmap/ip-kali.png" /></p>
+
+<p><img src="../assets/images/nmap/ip-metasploitable.png" /></p>
 
 <p>Ahora tenemos las IPs de nuestras máquinas, en mi caso la 10.0.2.15 para Kali y la 10.0.2.5 para Metasploitable2.</p>
 
 <p>El escaneo más básico para el reconocimiento de puertos con nmap es el comando <code class="language-plaintext highlighter-rouge">nmap ip_objetivo</code>.</p>
 
-<p><center><img src="../assets/images/nmap/nmap-basic.png" /></center></p>
+<p><img src="../assets/images/nmap/nmap-basic.png" /></p>
 
 <p>Podemos observar en la parte inferior derecha el tiempo que tomó nmap para el escaneo de puertos: 13.09s. Ahora bien, con el parámetro <code class="language-plaintext highlighter-rouge">-n</code> de nmap podemos reducir el tiempo de scaneo. Este parámetro hace
 que nmap no realice resolución DNS lo que reduce bastante el tiempo.</p>
 
-<p><center><img src="../assets/images/nmap/nmap-n.png" /></center></p>
+<p><img src="../assets/images/nmap/nmap-n.png" /></p>
 
 <p>De forma predeterminada nmap solo escanea los 1000 puertos más comunes para cada protocolo. Con el parámetro <code class="language-plaintext highlighter-rouge">-p</code> podemos indicar qué puertos queremos escanear separados por coma. Para indicar que queremos escanear todos los puertos
 podemor ejecutar <code class="language-plaintext highlighter-rouge">nmap -n -p- ip_objetivo</code>.</p>
 
-<p><center><img src="../assets/images/nmap/nmap-allports.png" /></center></p>
+<p><img src="../assets/images/nmap/nmap-allports.png" /></p>
 
 <p>Para ver las versiones de los servicios que se están ejecutando usamos el parámetro <code class="language-plaintext highlighter-rouge">-sV</code></p>
 
-<p><center><img src="../assets/images/nmap/nmap-versiones.png" /></center></p>
+<p><img src="../assets/images/nmap/nmap-versiones.png" /></p>
 
 <p>Ahora Nmap muestra otra columna “VERSION”, con información de las versiones de los servicios. Esta información es muy valiosa para ver versiones vulnerables de los servicos que se ejecutan.</p>
 
@@ -379,39 +214,8 @@ seguido del nombre del archivo de salida.</p>
 <p>Nmap tiene una infinidad de opciones que aquí no os he mostrado. Si quieres seguir investigando sobre esta herramienta te dejo por aquí el enlace a su página oficial, <a href="https://nmap.org/">nmap</a>.</p>
 
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-        
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-01-01T00:00:00+01:00">January 01, 2022</time></p>
-        
-      </footer>
-
-      
-
-      
-  <nav class="pagination">
-    
-      <a href="/laboratorio/" class="pagination--pager" title="Configuración del laboratorio de pruebas
-">Previous</a>
-    
-    
-      <a href="/quenotelocuentem2/" class="pagination--pager" title="Que no te lo cuenten. Ataque Zero-Day
-">Next</a>
-    
-  </nav>
-
-    </div>
-
-    
+    </section>
   </article>
-
-  
 </div>
 
     </div>

@@ -1,4 +1,586 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-23T19:48:26+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Que no te lo cuenten. OWASP</title><link href="http://localhost:4000/quenotelocuenOwasp/" rel="alternate" type="text/html" title="Que no te lo cuenten. OWASP" /><published>2022-01-23T00:00:00+01:00</published><updated>2022-01-23T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuenOwasp</id><content type="html" xml:base="http://localhost:4000/quenotelocuenOwasp/">&lt;h2 id=&quot;-qué-es-el-proyecto-owasp-&quot;&gt;¿ Qué es el proyecto OWASP ?&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-28T09:07:58+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Scripting en Python I - argparse</title><link href="http://localhost:4000/pythonI-argparse/" rel="alternate" type="text/html" title="Scripting en Python I - argparse" /><published>2022-01-24T00:00:00+01:00</published><updated>2022-01-24T00:00:00+01:00</updated><id>http://localhost:4000/pythonI-argparse</id><content type="html" xml:base="http://localhost:4000/pythonI-argparse/">&lt;h2 id=&quot;python3---argparse&quot;&gt;Python3 - argparse&lt;/h2&gt;
+
+&lt;p&gt;Este post pretende ser una introducción al módulo &lt;strong&gt;argparse&lt;/strong&gt; de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para
+construir procesadores de argumentos y opciones de línea de comando.&lt;/p&gt;
+
+&lt;p&gt;Para poder usar argparse lo primero que hay que hacer es importar el módulo: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import argparse&lt;/code&gt;. Ahora podemos trabajar con este módulo, y lo primero que vamos a hacer es
+crear un objeto:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ArgumentParser admite varios argumentos en formato clave:valor; algunos de ellos son:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;, texto que se mostrará antes de la ayuda del argumento.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;epilog&lt;/strong&gt;, texto que se mostrará después de la ayuda del argumento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Pongamos algunos ejemplos.&lt;/p&gt;
+
+&lt;p&gt;Supongamos que queremos hacer una breve descripción de la función que realiza nuestro script (argumento con clave description), y mostrar al final de la ayuda un ejemplo de uso (argumento con clave epilog).&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Ejemplo de uso: python3 ejemplo_argparse.py --target 127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ahora ejecutamos nuestro script: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python3 ejemplo_argparse.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/argumentParser.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por defecto, ArgumentParser agrega una opción que simplemente muestra el mensaje de ayuda, -h y –help.&lt;/p&gt;
+
+&lt;p&gt;Otra forma más interesante de usar el argumento epilog de ArgumentParser es asignándole el valor de una variable creada previamente. Imaginemos que queremos mostrar varios ejemplos
+de uso de nuestra herramienta. Para ello declaramos una variable llamada epilogo y le asignamos el texto que queremos que se muestre al final de la ayuda.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py -target 127.0.0.1 -p 80,443,8080'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Analicemos el códgio:&lt;/p&gt;
+
+&lt;p&gt;Hemos declarado la variable &lt;strong&gt;epilogo&lt;/strong&gt; después de importar el módulo, y le hemos asignado el texto que queremos asignar al argumento con clave epilog de ArgumentParser.&lt;/p&gt;
+
+&lt;p&gt;Para formatear la salida y tener más control sobre cómo se muestran las descripciones textuales usamos el argumento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;formatter_class=argparser.RawDescriptionHelpFormatter&lt;/code&gt;, de lo contrario
+se mostraría todo en una línea.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/epilog.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Otros argumentos que permite ArgumentParser son:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;prog&lt;/strong&gt;, determina el nombre del programa.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;usage&lt;/strong&gt;, texto que describe como se usa el programa.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;add_help&lt;/strong&gt;, agregar la opción -h / –help al analizador (por defecto es True).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;agregando-argumentos&quot;&gt;Agregando argumentos&lt;/h3&gt;
+
+&lt;p&gt;Para añadir argumentos a nuestro script usamos el método &lt;strong&gt;add_argument()&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Existen dos tipos de argumentos:&lt;strong&gt; posicionales&lt;/strong&gt; y &lt;strong&gt;opcionales&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si declaramos un argumento posicional, es obligatorio usarlo cuando ejecutamos nuestro script.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;target&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.target&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/posicional.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nos lanza un error porque no establecimos el argumento target. Ahora ejecutamos el script pasándole un objetivo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/posicional2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como se aprecia en la imagen el script se ejecutó sin errores y mostró el objetivo.&lt;/p&gt;
+
+&lt;p&gt;Los argumentos opcionales son aquellos que se declaran precedidos de la flag - o –. Como su propio nombre indica, son opcionales a la hora de ejecutar el script.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-t&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.t&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Si ejecutamos el script sin usar el argumento -t, el script no lanzará ningún error, ya que este argumento es opcional.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/opcional.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/opcional2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;También podemos especificar el argumento usando las flags - y – al mismo tiempo. En este caso, para imprimir el valor del argumento, usaremos el nombre de la flag –, ya sea usando - o – cuando ejecutemos el script.
+Vamos a verlo.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-t&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;--target&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.target&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Aquí vemos que podemos llamar al argumento con la versión corta -t o la versión larga –target. En la función print() usamos params.target independientemente de como ejecutemos el script.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/dobleflag.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al igual que ArgumentParser(), add_argument() también admite unos atributos mediante clave:valor para trabajar con los argumentos. Algunos de ellos son:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;action&lt;/strong&gt;, la acción que se realizará cuando se encuentre este argumento en la línea de comandos. Las acciones que puede tomar el argumento son:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;store&lt;/strong&gt;, es la opción por defecto, almacena el valor del argumento.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;store_const&lt;/strong&gt;, almacena el valor de la palabra clave const.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;store_true y store_false&lt;/strong&gt;, para almacenar los valores de True y False respectivamente.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;append&lt;/strong&gt;, almacena una lista y agrega cada valor del argumento a la lista. El siguiene script muestra por pantalla los  puertos
+agregados a una lista mediante &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action=&quot;append&quot;&lt;/code&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-p&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;--ports&quot;&lt;/span&gt;,action&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;append&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;port &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;params.ports:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;port&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+   parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+   parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-p&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;--ports&quot;&lt;/span&gt;,action&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;append&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+   params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;port &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;params.ports:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;port&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Al llamar varias veces al argumento -p o –ports se crea una lista de puertos que se muestran por consola.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/action_append.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;count&lt;/strong&gt;, cuenta el número de veces que ocurre un argumento&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En el siguiente script podemos ver un ejemplo de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;action=&quot;count&quot;&lt;/code&gt;, que muestra por pantalla el nivel de verbosidad elegido.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-v&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;--verbosity&quot;&lt;/span&gt;,action&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;count&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.verbosity&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/action_verbosidad.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;nargs&lt;/strong&gt;, número de argumentos que deben de aparecer en la línea de comandos. Estos argumentos se agregan a una lista.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;nargs=”?”, indica que el argumento puede tener cero o un valor.&lt;/li&gt;
+      &lt;li&gt;nargs=”*”, indica que el argumento puede tener cero o más valores.&lt;/li&gt;
+      &lt;li&gt;nargs=”+”, indica que el argumento debe tener al menos un valor.&lt;/li&gt;
+      &lt;li&gt;nargs=N, indica el número de valores que ha de tener el argumento, donde N es un número entero.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Veamos algunos ejemplos:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script con nargs=”?”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;--target&quot;&lt;/span&gt;,nargs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;?&quot;&lt;/span&gt;, &lt;span class=&quot;nv&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.target&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Aquí introducimos un concepto nuevo, atributo con clave &lt;strong&gt;default&lt;/strong&gt;. Esto significa que si no se especifica el parámetro –target, por defecto el valor será el que
+asignemos a la clave &lt;strong&gt;default&lt;/strong&gt;. Si se especifica el argumento en la línea de comandos se asignará el valor pasado.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_interrogacion.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_interrogacion2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script con nargs=”*”&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;--target&quot;&lt;/span&gt;,nargs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt;,default&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;127.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;target &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;params.target:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;target&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Recordemos que en este caso podemos asignar cero o varios argumentos. Si se ñade más de un argumento los datos se guardarán en una lista. Si no se pasa ninǵun argumento
+por defecto mostrará el valor pasado en el atributo con clave default.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_asterisco.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script con nargs=”+”.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;--target&quot;&lt;/span&gt;,nargs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;+&quot;&lt;/span&gt;,default&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;227.0.0.1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_suma.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El script lanza un mensaje de error avisando que no se especificó al menos un argumento.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Script con nargs=N&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;--target&quot;&lt;/span&gt;,nargs&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_suma.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El script muestra un mensaje de error si no se indican dos argumentos.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;const&lt;/strong&gt;, valor constante que se le asignará al argumento.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;default&lt;/strong&gt;, valor que tendrá el argumento si no se especifica en la línea de comandos.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;, por defecto los argumentos son cadenas, podemos especificar que el valor del argumento sea un int o float por ejemplo.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;choices&lt;/strong&gt;, es un contenedor de valores permitidos en el argumento.&lt;br /&gt;
+Cuando usamos el atributo &lt;strong&gt;choices&lt;/strong&gt; los argumentos de la línea de comando deben seleccionarse de un conjunto restringido de valores.
+En el siguiente script indicamos qué niveles de verbosidad puede tener el argumento. En este caso 1, 2 o 3.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3&lt;/span&gt;
+
+import argparse
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,8080
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Escaner de puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;--verbosity&quot;&lt;/span&gt;,choices&lt;span class=&quot;o&quot;&gt;=[&lt;/span&gt;1,2,3],type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;int,default&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.verbosity&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/choices.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si el argumento no coincide con los valores establecidos en el atributo &lt;strong&gt;choices&lt;/strong&gt; el script muestra un mensaje de error.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;required&lt;/strong&gt;, permite indicar si el argumento es obligatorio. Por defecto es False.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;help&lt;/strong&gt;, para mostrar una ayuda de lo que hace el argumento.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;metavar&lt;/strong&gt;, para indicar el nombre del argumento en los mensajes de ayuda.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;dest&lt;/strong&gt;, para indicar el nombre del destino donde se guardará el del argumento.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Repasemos todo lo anterior mediante la creación de un script con ejemplos de lo que hemos visto. El siguiente script pretender ser una herramienta para escanear puertos abiertos de un host.
+Para ello utilizaremos el módulo argparse para definir que argumentos requiere el programa y como analizarlos.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/python3 # Establece el intérprete&lt;/span&gt;
+
+import argparse &lt;span class=&quot;c&quot;&gt;# Importamos el módulo argparse&lt;/span&gt;
+
+epilogo &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'''Ejemplo de uso de la herramienta
+
+	+ Visualizar la ayuda:
+
+		python3 ejemplo_argparse.py --help
+
+	+ Escano básico:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1
+
+	+ Escanear varios puertos:
+
+		python3 ejemplo_argparse.py --target 127.0.0.1 -p 80,443,445 -verbosity 2
+
+'''&lt;/span&gt;
+
+parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Herramienta para escanear puertos&quot;&lt;/span&gt;,epilog&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;epilogo,formatter_class&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;argparse.RawDescriptionHelpFormatter,usage&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;python3 ejemplo_argparse.py -t host&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;s1&quot;&gt;''' 
+	Argumento para establecer el host a escanear. 
+	Es un argumento obligatorio. 
+	En el atributo dest indicamos donde se almacena el argumento, en este caso en host.
+	Con metavar indicamos el nombre del argumento en el mensaje de uso.
+'''&lt;/span&gt;
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-t&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;--target&quot;&lt;/span&gt;,dest&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;host&quot;&lt;/span&gt;,metavar&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;host&quot;&lt;/span&gt;,required&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;True,help&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Host a escanear: -t/--target 192.168.1.15&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;s1&quot;&gt;'''
+	Argumento para establecer los puertos a escanear.
+	Es un argumento opcional, si no se indica, se establece por defecto los puertos 80 y 8080.
+'''&lt;/span&gt;
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-p&quot;&lt;/span&gt;,&lt;span class=&quot;s2&quot;&gt;&quot;--port&quot;&lt;/span&gt;,default&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;80,8080&quot;&lt;/span&gt;,help&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Puertos a escanear: -p/--port 80,443,445. Por defecto 80,8080&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;s1&quot;&gt;'''
+	Argumento para indicar el nivel de verbosidad.
+	Por defecto es 1.
+	El atributo choices indica que se puede elegir un nivel de verbosidad entre 1 y 3.
+	Se indica que el argumento es de tipo int.
+'''&lt;/span&gt;
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;--verbosity&quot;&lt;/span&gt;,choices&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;range&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1,4&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,default&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1,type&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;int,help&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Elige nivel de verbosidad: --verbosity 1. Por defecto el nivel es 1.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;s1&quot;&gt;'''
+	Argumento para establecer un escaneo rápido.
+	Si el argumento aparece en la línea de comandos, se almacena el valor True.
+	Según se indica en el atributo con clave dest, el valor se almacena en fast.
+'''&lt;/span&gt;
+parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-sF&quot;&lt;/span&gt;,dest&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fast&quot;&lt;/span&gt;,action&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;store_true&quot;&lt;/span&gt;,help&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Establece un escaneo rápido&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+
+print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;El host a escanear es %s&quot;&lt;/span&gt; % params.host&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+puertos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; params.port.split&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;,&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;port &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;puertos:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Escanear puerto %s&quot;&lt;/span&gt; % port&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;params.verbosity &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; 1:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;El nivel de verbosidad es 1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 
+
+&lt;span class=&quot;k&quot;&gt;elif &lt;/span&gt;params.verbosity &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; 2:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;El nivel de verbosidad es 2&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;El nivel de verbosidad es 3&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Si se indica el argumento -sF desde la línea de comandos se realizará un escaneo rápido.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;params.fast &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; True:
+
+	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Se ha seleccionado un escaneo rápido&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/script_final.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para quien esté interesado en profundizar más sobre este módulo os recomiendo visitar &lt;a href=&quot;https://docs.python.org/3/library/argparse.html&quot;&gt;https://docs.python.org/3/library/argparse.html&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Módulo argparse Python3.</summary></entry><entry><title type="html">Que no te lo cuenten. OWASP</title><link href="http://localhost:4000/quenotelocuenOwasp/" rel="alternate" type="text/html" title="Que no te lo cuenten. OWASP" /><published>2022-01-23T00:00:00+01:00</published><updated>2022-01-23T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuenOwasp</id><content type="html" xml:base="http://localhost:4000/quenotelocuenOwasp/">&lt;h2 id=&quot;-qué-es-el-proyecto-owasp-&quot;&gt;¿ Qué es el proyecto OWASP ?&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;OWASP&lt;/strong&gt; (Open Web Application Security Proyect), es un proyecto abierto de seguridad de aplicaciones Web. La comunidad OWASP está formada por empresas, organizaciones educativas y
 particulares de todo el mundo. Proporciona una base para probar los controles técnicos de seguridad de las aplicaciones Web.&lt;/p&gt;
@@ -102,28 +684,29 @@ puertos y servicios se están ejecutando en la máquina vulnerable Metasploitabl
 
 &lt;p&gt;Ejecuta el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ip a&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt; desde la terminal en cada una de las máquinas para ver la dirección IP asignada.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/ip-kali.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/ip-metasploitable.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/ip-kali.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/ip-metasploitable.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora tenemos las IPs de nuestras máquinas, en mi caso la 10.0.2.15 para Kali y la 10.0.2.5 para Metasploitable2.&lt;/p&gt;
 
 &lt;p&gt;El escaneo más básico para el reconocimiento de puertos con nmap es el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap ip_objetivo&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-basic.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-basic.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Podemos observar en la parte inferior derecha el tiempo que tomó nmap para el escaneo de puertos: 13.09s. Ahora bien, con el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-n&lt;/code&gt; de nmap podemos reducir el tiempo de scaneo. Este parámetro hace
 que nmap no realice resolución DNS lo que reduce bastante el tiempo.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-n.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-n.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;De forma predeterminada nmap solo escanea los 1000 puertos más comunes para cada protocolo. Con el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-p&lt;/code&gt; podemos indicar qué puertos queremos escanear separados por coma. Para indicar que queremos escanear todos los puertos
 podemor ejecutar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap -n -p- ip_objetivo&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-allports.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-allports.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para ver las versiones de los servicios que se están ejecutando usamos el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sV&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/nmap/nmap-versiones.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-versiones.png&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora Nmap muestra otra columna “VERSION”, con información de las versiones de los servicios. Esta información es muy valiosa para ver versiones vulnerables de los servicos que se ejecutan.&lt;/p&gt;
 

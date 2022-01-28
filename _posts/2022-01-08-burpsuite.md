@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 title: "Burp Suite"
 excerpt: "Burp Suite, la navaja suiza del pentester." 
 date: 2022-01-07
