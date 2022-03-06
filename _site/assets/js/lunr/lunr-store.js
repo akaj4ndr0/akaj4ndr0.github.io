@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"Python3 - argparse Este post pretende ser una introducción al módulo argparse de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para construir procesadores de argumentos y opciones de línea de comando. Para poder usar argparse lo primero que hay que hacer es importar...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/pythonI-argparse/",
+        "teaser":null},{
+        "title": "Scripting en Python II - socket",
+        "excerpt":"Python3 - socket Este post pretende ser una introducción al módulo socket de Python. Socket es un módulo estándar de Python que permite conexiones TCP/IP y UDP. Varias familias de socket son compatibles con este módulo. En este post vamos a tratar con la familia AF_INET, que se utiliza para...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/pythonII-socket/",
         "teaser":null}]
