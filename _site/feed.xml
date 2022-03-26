@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-06T19:59:37+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Scripting en Python II - socket</title><link href="http://localhost:4000/pythonII-socket/" rel="alternate" type="text/html" title="Scripting en Python II - socket" /><published>2022-03-05T00:00:00+01:00</published><updated>2022-03-05T00:00:00+01:00</updated><id>http://localhost:4000/pythonII-socket</id><content type="html" xml:base="http://localhost:4000/pythonII-socket/">&lt;h2 id=&quot;python3---socket&quot;&gt;Python3 - socket&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-26T18:04:09+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Scripting en Python III - requests</title><link href="http://localhost:4000/pythonIII-requests/" rel="alternate" type="text/html" title="Scripting en Python III - requests" /><published>2022-03-20T00:00:00+01:00</published><updated>2022-03-20T00:00:00+01:00</updated><id>http://localhost:4000/pythonIII-requests</id><content type="html" xml:base="http://localhost:4000/pythonIII-requests/">&lt;h2 id=&quot;python3---requests&quot;&gt;Python3 - requests&lt;/h2&gt;
+
+&lt;p&gt;Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada.
+Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando &lt;strong&gt;pip install requests&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;peticiones-get-con-requests&quot;&gt;Peticiones GET con requests&lt;/h2&gt;
+
+&lt;p&gt;Importa el módulo requests y utiliza el método GET indicando la URL a la que hacer la petición.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import requests
+response &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.get&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://google.com&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ahora tenemos el objeto response del que podemos extraer todo tipo de información.&lt;/p&gt;
+
+&lt;h3 id=&quot;pasar-parámetros-por-get&quot;&gt;Pasar parámetros por GET&lt;/h3&gt;
+
+&lt;p&gt;Para pasar datos en la cadena de la URL utilizamos el atributo params de la función GET en formato clave:valor
+Podermos crear un diccionario con los datos a enviar y lo pasamos al atributo params.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import requests
+parametros &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'key1'&lt;/span&gt;:&lt;span class=&quot;s1&quot;&gt;'val1'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'key2'&lt;/span&gt;:&lt;span class=&quot;s1&quot;&gt;'val2'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+response &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; request.get&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;url,params&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;parametros&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;peticiones-post-con-requests&quot;&gt;Peticiones POST con requests&lt;/h2&gt;
+
+&lt;p&gt;Para realizar una petición POST con el módulo requests, pasamos al atributo data de la función POST de requests los datos a enviar en formato clave:valor.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import requests
+data &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'user'&lt;/span&gt;:&lt;span class=&quot;s1&quot;&gt;'usuario'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'password'&lt;/span&gt;:&lt;span class=&quot;s1&quot;&gt;'password'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+response &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.post&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://mipagina/login&quot;&lt;/span&gt;,data&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;data&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;http-put-delete-head-y-options&quot;&gt;HTTP: PUT, DELETE, HEAD y OPTIONS&lt;/h2&gt;
+
+&lt;p&gt;Requests también admite solicitudes HTTP de tipo PUT, DELETE, HEAD y OPTIONS&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.put&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://mipagina/put&quot;&lt;/span&gt;,data&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'key'&lt;/span&gt;:&lt;span class=&quot;s1&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.delete&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://mipagina/delete&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.head&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://mipagina&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+r &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.options&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://mipagina&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;contenido-de-la-respuesta&quot;&gt;Contenido de la respuesta&lt;/h2&gt;
+
+&lt;p&gt;Hasta ahora hemos realizado peticiones con la librería requests. Ahora vamos a ver el contenido de la respuesta de una petición almacenado en el objeto response a través de sus atributos.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;response.url&lt;/strong&gt;: vemos la url solicitada&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/url.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/r_url.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso, response.url muestra una redirección a la URL http://192.168.136.129/dvwa/login.php, ya que no hemos iniciado sesión en la aplicación. De hecho,
+a través del atributo &lt;strong&gt;history&lt;/strong&gt; podemos ver los códigos de estado de la redirección.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/history.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/r_history.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si queremos desactivar la redirección, indicamos el parámetro &lt;strong&gt;allow_redirects=False&lt;/strong&gt; en la petición.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/allow_redirects.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/r_allow_redirects.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;response.status_code&lt;/strong&gt;: para ver el código de respuesta de la petición&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/status_code.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/r_status_code.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como se puede apreciar en la imagen el código de respuesta de la petición es exitoso y se muestra el código de respuesta 200 del servidor, aunque como se ha
+comentado antes, al no iniciar sesión en la aplicación, también se muestra una redirección a la página de login.php.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;response.text&lt;/strong&gt;: para ver la respuesta en formato texto&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/text.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/r_text.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;response.headers&lt;/strong&gt;: para ver las cabeceras de la respuesta&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/headers.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/requests/r_headers.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En la imagen anterior podemos ver tres formas de mostrar las cabeceras de la respuesta.&lt;/p&gt;
+
+&lt;h2 id=&quot;encabezados-personalizados&quot;&gt;Encabezados personalizados&lt;/h2&gt;
+
+&lt;p&gt;La librería requests permite también crear peticiones con encabezados personalizados a través del parámetro headers de la petición.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import requests
+
+response &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.get&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://192.168.136.129&quot;&lt;/span&gt;,headers&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'user-agent'&lt;/span&gt;:&lt;span class=&quot;s1&quot;&gt;'user-agent'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;timeouts&quot;&gt;Timeouts&lt;/h2&gt;
+
+&lt;p&gt;Por último vamos a ver	el parámetro timeout de una petición requests. Se puede indicar, mediante el parámetro &lt;strong&gt;timeout&lt;/strong&gt;, que la solicitud deje de esperar una respuesta después
+de un número determinado de segundos.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;response &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; requests.get&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;url&quot;&lt;/span&gt;,timeout&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0.02&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hasta aquí una aproximación al módulo requests de Python. 
+Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Módulo requests Python3.</summary></entry><entry><title type="html">Scripting en Python II - socket</title><link href="http://localhost:4000/pythonII-socket/" rel="alternate" type="text/html" title="Scripting en Python II - socket" /><published>2022-03-05T00:00:00+01:00</published><updated>2022-03-05T00:00:00+01:00</updated><id>http://localhost:4000/pythonII-socket</id><content type="html" xml:base="http://localhost:4000/pythonII-socket/">&lt;h2 id=&quot;python3---socket&quot;&gt;Python3 - socket&lt;/h2&gt;
 
 &lt;p&gt;Este post pretende ser una introducción al módulo &lt;strong&gt;socket&lt;/strong&gt; de Python. Socket es un módulo estándar de Python que permite conexiones TCP/IP y UDP.
 Varias familias de socket son compatibles con este módulo. En este post vamos a tratar con la familia AF_INET, que se utiliza para designar el tipo de de direcciones 

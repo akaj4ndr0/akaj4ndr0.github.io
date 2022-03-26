@@ -38,4 +38,9 @@ var store = [{
         "excerpt":"Python3 - socket Este post pretende ser una introducción al módulo socket de Python. Socket es un módulo estándar de Python que permite conexiones TCP/IP y UDP. Varias familias de socket son compatibles con este módulo. En este post vamos a tratar con la familia AF_INET, que se utiliza para...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/pythonII-socket/",
+        "teaser":null},{
+        "title": "Scripting en Python III - requests",
+        "excerpt":"Python3 - requests Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada. Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando pip install...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/pythonIII-requests/",
         "teaser":null}]
