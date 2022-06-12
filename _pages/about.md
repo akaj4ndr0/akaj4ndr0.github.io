@@ -1,8 +1,9 @@
 ---
-layout: splash
+layout: archive
 title: "About me"
 permalink: /about/
 date: 2022-01-15
+author_profile: true
 ---
 
 <br>

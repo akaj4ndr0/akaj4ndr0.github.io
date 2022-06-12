@@ -43,4 +43,9 @@ var store = [{
         "excerpt":"Python3 - requests Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada. Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando pip install...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/pythonIII-requests/",
+        "teaser":null},{
+        "title": "Fuzzing Aplicaciones Web",
+        "excerpt":"Fuzzing Web El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web. Existen varias herramientas...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/fuzzing/",
         "teaser":null}]

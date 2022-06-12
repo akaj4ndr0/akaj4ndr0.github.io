@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-26T18:04:09+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Scripting en Python III - requests</title><link href="http://localhost:4000/pythonIII-requests/" rel="alternate" type="text/html" title="Scripting en Python III - requests" /><published>2022-03-20T00:00:00+01:00</published><updated>2022-03-20T00:00:00+01:00</updated><id>http://localhost:4000/pythonIII-requests</id><content type="html" xml:base="http://localhost:4000/pythonIII-requests/">&lt;h2 id=&quot;python3---requests&quot;&gt;Python3 - requests&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-12T19:27:06+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Fuzzing Aplicaciones Web</title><link href="http://localhost:4000/fuzzing/" rel="alternate" type="text/html" title="Fuzzing Aplicaciones Web" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/fuzzing</id><content type="html" xml:base="http://localhost:4000/fuzzing/">&lt;h1 id=&quot;fuzzing-web&quot;&gt;Fuzzing Web&lt;/h1&gt;
+
+&lt;p&gt;El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta
+como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web.&lt;/p&gt;
+
+&lt;p&gt;Existen varias herramientas que sirven para hacer fuzzing de aplicaciones web. Entre ellas, dirsearch, wfuzz, y gobuster.&lt;/p&gt;
+
+&lt;h2 id=&quot;fuzzing-web-con-dirsearch&quot;&gt;Fuzzing Web con dirsearch&lt;/h2&gt;
+
+&lt;p&gt;Dirsearch es una herramienta de línea de comandos que permite a un atacante realizar fuzzing sobre una aplicación web. Podéis descagar la herramienta clonando el repositorio de GitHub a través
+de este &lt;a href=&quot;https://github.com/maurosoria/dirsearch&quot;&gt;enlace&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone https://github.com/maurosoria/dirsearch&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez clonado el repositorio nos metemos dentro del directorio y vemos la ayuda de la herramienta.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/dirsearch/ayuda.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;De entre las opciones que ofrece dirsearch, podemos indicar un diccionario personalizado, extensiones, buśqueda recursiva, establecer cookies…
+La forma más básica de ejecutar la herramienta es &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./dirsearch -u http://ip&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;fuzzing-web-con-wfuzz&quot;&gt;Fuzzing Web con wfuzz&lt;/h2&gt;
+
+&lt;p&gt;Otra herramiente de línea de comandos para realizar fuzzing en aplicaciones web es &lt;strong&gt;wfuzz&lt;/strong&gt;. Esta herramienta viene instalada por defecto
+en Kali Linux.&lt;/p&gt;
+
+&lt;p&gt;Con el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wfuzz -h&lt;/code&gt; podemos visualizar la ayuda.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/dirsearch/wfuzz.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El siguiente ejemplo de wfuzz obtiene como resultado dos directorios, manual y secret.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/dirsearch/wfuzz2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;-c sirve para que muestre los resultados con colores&lt;/li&gt;
+  &lt;li&gt;–hc para que no muestre las respueta con código de estado 404&lt;/li&gt;
+  &lt;li&gt;-L para que muestre la redirección&lt;/li&gt;
+  &lt;li&gt;-t es el número de hilos&lt;/li&gt;
+  &lt;li&gt;-w indica el diccionario a utilizar para el fuzzing&lt;/li&gt;
+  &lt;li&gt;FUZZ es la palabra reservada donde se incluye cada entrada del diccioario&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fuzzing-web-con-gobuster&quot;&gt;Fuzzing Web con gobuster&lt;/h2&gt;
+
+&lt;p&gt;Por último vamos a ver la herramienta &lt;strong&gt;gobuster&lt;/strong&gt;. Podemos instalar gobuster con el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install gobuster&lt;/code&gt;. Ejecutamos la ayuda para ver qué opciones
+nos ofrece la herramienta.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/dirsearch/gobuster.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gobuster nos ofrece la posiblidad de buscar directorios y ficheros ocultos mediante la opción dir. Para ver qué opciones nos ofrece este modo podemos ejecutar su ayuda.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/dirsearch/gobuster3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;El siguiente comando de gobuster obtiene como resultado los ficheros login.php y secret.txt.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/dirsearch/gobuster2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dir es la opción de gobuster para encontrar directorios y archivos&lt;/li&gt;
+  &lt;li&gt;-u para establecer el target&lt;/li&gt;
+  &lt;li&gt;-w indica el diccionario a utilizar para el fuzzing&lt;/li&gt;
+  &lt;li&gt;-x para indicar que busque archivos con las extensiones pasadas y separadas por coma&lt;/li&gt;
+  &lt;li&gt;-o para exportar los resultados en un archivo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En este post hemos hablado sobre diferentes herramientas para poder realizar fuzzing sobre aplicaciones web, centrándonos en la búsqueda de directorios y archivos. Existen otras herramientas
+para realizar esta tarea durante la fase de enumeración. Os animo a profundizar más sobre estas herramientas, y descubrir algunas más y elegid aquella con la que os sintáis más cómod@s.&lt;/p&gt;
+
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Fuzzing</summary></entry><entry><title type="html">Scripting en Python III - requests</title><link href="http://localhost:4000/pythonIII-requests/" rel="alternate" type="text/html" title="Scripting en Python III - requests" /><published>2022-03-20T00:00:00+01:00</published><updated>2022-03-20T00:00:00+01:00</updated><id>http://localhost:4000/pythonIII-requests</id><content type="html" xml:base="http://localhost:4000/pythonIII-requests/">&lt;h2 id=&quot;python3---requests&quot;&gt;Python3 - requests&lt;/h2&gt;
 
 &lt;p&gt;Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada.
 Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando &lt;strong&gt;pip install requests&lt;/strong&gt;&lt;/p&gt;
