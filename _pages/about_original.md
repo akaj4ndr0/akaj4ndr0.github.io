@@ -16,7 +16,6 @@ Mi nombre es Javier González, actualmente trabajo como pentester en Atos IT des
 
 ## Esta es mi formación:
 
-- Certificación CEH EC-Council
 - CPHE (Certificado Profesional de Hacking Ético - The Security Sentinel)
 - Hacking de Redes Inalámbricas (Mastermind)
 - Introducción al Hacking Ético (Mastermind)
@@ -27,7 +26,7 @@ Mi nombre es Javier González, actualmente trabajo como pentester en Atos IT des
 
 ## Experiencia
 
-- Pentester / Ethical Hacker en Eviden
+- Pentester / Ethical Hacker en Atos IT
 - Capataz en Factor Cinco Solutions
 - Carretillero en DHL
 
