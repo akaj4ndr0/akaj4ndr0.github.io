@@ -12,7 +12,7 @@ author_profile: true
 </p>
 <br>
 
-Mi nombre es Javier González, actualmente trabajo como pentester en Atos IT desde Julio de 2020.
+Mi nombre es Javier González, actualmente trabajo como pentester en Eviden  desde Julio de 2020.
 
 ## Esta es mi formación:
 
