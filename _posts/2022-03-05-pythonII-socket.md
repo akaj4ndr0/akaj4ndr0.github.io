@@ -157,7 +157,7 @@ if params.range: # Si se indica el parámetro --range, la herramienta escaneará
 
 
 
-
+Hasta la próxima.
 
 
 

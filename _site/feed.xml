@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-11T10:44:25+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Fuzzing Aplicaciones Web</title><link href="http://localhost:4000/fuzzing/" rel="alternate" type="text/html" title="Fuzzing Aplicaciones Web" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/fuzzing</id><content type="html" xml:base="http://localhost:4000/fuzzing/">&lt;h1 id=&quot;fuzzing-web&quot;&gt;Fuzzing Web&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-31T15:44:48+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Docker Technology</title><link href="http://localhost:4000/docker/" rel="alternate" type="text/html" title="Docker Technology" /><published>2023-05-01T00:00:00+02:00</published><updated>2023-05-01T00:00:00+02:00</updated><id>http://localhost:4000/docker</id><content type="html" xml:base="http://localhost:4000/docker/">&lt;h1 id=&quot;docker&quot;&gt;Docker&lt;/h1&gt;
+
+&lt;p&gt;Docker es la tecnología de código abierto utilizado para desplegar aplicaciones dentro de contenedores. Esto va a permitir que varias aplicaciones funcionen en diferentes entornos.
+Podemos crear nuestras propias imágenes a través del archivo Dockerfile (no es el propósito de este post) o bien descargarlas directamente desde el repositorio de Docker.&lt;/p&gt;
+
+&lt;p&gt;Para instalar docker en tu máquina Kali solo tienes que introducir el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install docker.io -y&lt;/code&gt;, como muestra la siguiente imagen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker/instalacion.png&quot; /&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para iniciar el demonio de docker introduce el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;service docker start&lt;/code&gt;. Ahora ya tienes instalado docker en tu Kali y levantado el servicio para poder usarlo.&lt;/p&gt;
+
+&lt;h2 id=&quot;proyecto-vulhub&quot;&gt;Proyecto Vulhub&lt;/h2&gt;
+
+&lt;p&gt;El proyecto Vulhub &lt;a href=&quot;https://github.com/vulhub/vulhub&quot;&gt;enlace&lt;/a&gt; es una colección open source de entornos vulnerables basados en Docker-Compose. Esto va a facilitar el despliegue
+de entornos vulnerables con los que practicar la explotación de vulnerabilidades de forma rápida y sencilla.&lt;/p&gt;
+
+&lt;p&gt;Docker-Compose es una herramienta para definir y ejecutar aplicaciones Docker de varios contenedores. Utiliza un archivo YAML para configurar los servicios, y con un solo comando crea
+e inicia los servicios desde su configuración.&lt;/p&gt;
+
+&lt;p&gt;Para instalar Docker-Compose introducimos el siguiente comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install docker-compose&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker/instalacionDockerCompose.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;despliegue-de-contenedores&quot;&gt;Despliegue de contenedores&lt;/h2&gt;
+
+&lt;p&gt;Accede al repositorio de Vulhub &lt;a href=&quot;https://github.com/vulhub/vulhub&quot;&gt;enlace&lt;/a&gt; que quieres clonar y descárgalo en tu Kali. En este post vamos a descargarnos el proyecto de Wordpress &lt;strong&gt;pwnscriptum&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Una vez clonado, accede al repositorio y deberías ver los archivos necesarios para el despliegue del contenedor, de entre los que esta el archivo YAML, tal y como se muestra en la siguiente imagen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker/archivoYAML.png&quot; /&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para inciar la aplicación vulnerable ejecutamos los siguientes comandos desde la ruta donde se encuentra el archivo &lt;strong&gt;docker-compose.yml&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker/inicioContenedor.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si ejecutamos los siguientes comandos de docker podemos ver los datos de la imágen y el contenedor, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker images&lt;/code&gt; y &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker ps&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docker/dockerPS.png&quot; /&gt;
+&lt;img src=&quot;../assets/images/docker/dockerIMAGES.png&quot; /&gt;&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Docker</summary></entry><entry><title type="html">Fuzzing Aplicaciones Web</title><link href="http://localhost:4000/fuzzing/" rel="alternate" type="text/html" title="Fuzzing Aplicaciones Web" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/fuzzing</id><content type="html" xml:base="http://localhost:4000/fuzzing/">&lt;h1 id=&quot;fuzzing-web&quot;&gt;Fuzzing Web&lt;/h1&gt;
 
 &lt;p&gt;El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta
 como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web.&lt;/p&gt;
@@ -328,7 +366,9 @@ params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span 
 
 		print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;[!]Error de conexion con el objetivo&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 		sys.exit&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Módulo socket Python3.</summary></entry><entry><title type="html">Scripting en Python I - argparse</title><link href="http://localhost:4000/pythonI-argparse/" rel="alternate" type="text/html" title="Scripting en Python I - argparse" /><published>2022-01-24T00:00:00+01:00</published><updated>2022-01-24T00:00:00+01:00</updated><id>http://localhost:4000/pythonI-argparse</id><content type="html" xml:base="http://localhost:4000/pythonI-argparse/">&lt;h2 id=&quot;python3---argparse&quot;&gt;Python3 - argparse&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Módulo socket Python3.</summary></entry><entry><title type="html">Scripting en Python I - argparse</title><link href="http://localhost:4000/pythonI-argparse/" rel="alternate" type="text/html" title="Scripting en Python I - argparse" /><published>2022-01-24T00:00:00+01:00</published><updated>2022-01-24T00:00:00+01:00</updated><id>http://localhost:4000/pythonI-argparse</id><content type="html" xml:base="http://localhost:4000/pythonI-argparse/">&lt;h2 id=&quot;python3---argparse&quot;&gt;Python3 - argparse&lt;/h2&gt;
 
 &lt;p&gt;Este post pretende ser una introducción al módulo &lt;strong&gt;argparse&lt;/strong&gt; de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para
 construir procesadores de argumentos y opciones de línea de comando.&lt;/p&gt;
@@ -1217,22 +1257,4 @@ a la máquina virtual. Elige Linux en la opción Tipo y como versión elige Othe
 
 &lt;p&gt;¡¡¡ Hemos acabado !!! Ya tienes un laboratorio para realizar pruebas de seguridad y hacer Hacking de forma segura.&lt;/p&gt;
 
-&lt;p&gt;Configura el adaptador de red como hicimos en la máquina Kali.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">En esta sección encontrarás todo lo necesario para crear un laboratorio para pruebas de pentesting.</summary></entry><entry><title type="html">Programa #Include</title><link href="http://localhost:4000/include/" rel="alternate" type="text/html" title="Programa #Include" /><published>2021-12-16T00:00:00+01:00</published><updated>2021-12-16T00:00:00+01:00</updated><id>http://localhost:4000/include</id><content type="html" xml:base="http://localhost:4000/include/">&lt;h2 id=&quot;la-fundación-goodjob&quot;&gt;La Fundación GoodJob&lt;/h2&gt;
-
-&lt;p&gt;La Fundación GoodJob desarrolla el Programa #Include con el objetivo de formar en seguridad informática a personas con discapacidad.
-Se trata de un programa de empleabilidad gratuito, que se desarrolla de forma online, destinado a desarrollar competencias en el sector de la ciberseguridad, 
-una de las profesiones más innovadoras y con más demanda de empleo en la actualidad.&lt;/p&gt;
-
-&lt;p&gt;El Programa #Include cuenta con la colaboración de varias instituciones:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;El Instituto Nacional de Ciberseguridad&lt;/li&gt;
-  &lt;li&gt;El Centro Criptológico Nacional&lt;/li&gt;
-  &lt;li&gt;La Comunidad de Madrid&lt;/li&gt;
-  &lt;li&gt;La Generalitat de Catalunya&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;La primera edición del programa se realizó entre Mayo y Junio de 2020, y hasta la fecha se han realizado cuatro ediciones.
-El programa ha sido un éxito rotundo, consiguiento integrar a más del 80% de los alumnos en empresas colaboradoras, entre las que se incluyen Atos, Telefónica, s21sec, entre otras.&lt;/p&gt;
-
-&lt;p&gt;Se espera que durante los próximos años se realicen varias ediciones y que el número de empresas colaboradoras siga creciendo.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Conoce el programa #Include creado por la Fundación GoodJob.</summary></entry></feed>
+&lt;p&gt;Configura el adaptador de red como hicimos en la máquina Kali.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">En esta sección encontrarás todo lo necesario para crear un laboratorio para pruebas de pentesting.</summary></entry></feed>

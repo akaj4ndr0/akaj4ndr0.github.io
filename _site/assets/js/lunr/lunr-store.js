@@ -48,4 +48,9 @@ var store = [{
         "excerpt":"Fuzzing Web El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web. Existen varias herramientas...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/fuzzing/",
+        "teaser":null},{
+        "title": "Docker Technology",
+        "excerpt":"Docker Docker es la tecnología de código abierto utilizado para desplegar aplicaciones dentro de contenedores. Esto va a permitir que varias aplicaciones funcionen en diferentes entornos. Podemos crear nuestras propias imágenes a través del archivo Dockerfile (no es el propósito de este post) o bien descargarlas directamente desde el repositorio...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/docker/",
         "teaser":null}]
