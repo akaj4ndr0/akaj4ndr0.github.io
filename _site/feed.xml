@@ -1,42 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-31T15:44:48+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Docker Technology</title><link href="http://localhost:4000/docker/" rel="alternate" type="text/html" title="Docker Technology" /><published>2023-05-01T00:00:00+02:00</published><updated>2023-05-01T00:00:00+02:00</updated><id>http://localhost:4000/docker</id><content type="html" xml:base="http://localhost:4000/docker/">&lt;h1 id=&quot;docker&quot;&gt;Docker&lt;/h1&gt;
-
-&lt;p&gt;Docker es la tecnología de código abierto utilizado para desplegar aplicaciones dentro de contenedores. Esto va a permitir que varias aplicaciones funcionen en diferentes entornos.
-Podemos crear nuestras propias imágenes a través del archivo Dockerfile (no es el propósito de este post) o bien descargarlas directamente desde el repositorio de Docker.&lt;/p&gt;
-
-&lt;p&gt;Para instalar docker en tu máquina Kali solo tienes que introducir el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install docker.io -y&lt;/code&gt;, como muestra la siguiente imagen:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker/instalacion.png&quot; /&gt;.&lt;/p&gt;
-
-&lt;p&gt;Para iniciar el demonio de docker introduce el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;service docker start&lt;/code&gt;. Ahora ya tienes instalado docker en tu Kali y levantado el servicio para poder usarlo.&lt;/p&gt;
-
-&lt;h2 id=&quot;proyecto-vulhub&quot;&gt;Proyecto Vulhub&lt;/h2&gt;
-
-&lt;p&gt;El proyecto Vulhub &lt;a href=&quot;https://github.com/vulhub/vulhub&quot;&gt;enlace&lt;/a&gt; es una colección open source de entornos vulnerables basados en Docker-Compose. Esto va a facilitar el despliegue
-de entornos vulnerables con los que practicar la explotación de vulnerabilidades de forma rápida y sencilla.&lt;/p&gt;
-
-&lt;p&gt;Docker-Compose es una herramienta para definir y ejecutar aplicaciones Docker de varios contenedores. Utiliza un archivo YAML para configurar los servicios, y con un solo comando crea
-e inicia los servicios desde su configuración.&lt;/p&gt;
-
-&lt;p&gt;Para instalar Docker-Compose introducimos el siguiente comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install docker-compose&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker/instalacionDockerCompose.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;despliegue-de-contenedores&quot;&gt;Despliegue de contenedores&lt;/h2&gt;
-
-&lt;p&gt;Accede al repositorio de Vulhub &lt;a href=&quot;https://github.com/vulhub/vulhub&quot;&gt;enlace&lt;/a&gt; que quieres clonar y descárgalo en tu Kali. En este post vamos a descargarnos el proyecto de Wordpress &lt;strong&gt;pwnscriptum&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Una vez clonado, accede al repositorio y deberías ver los archivos necesarios para el despliegue del contenedor, de entre los que esta el archivo YAML, tal y como se muestra en la siguiente imagen:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker/archivoYAML.png&quot; /&gt;.&lt;/p&gt;
-
-&lt;p&gt;Para inciar la aplicación vulnerable ejecutamos los siguientes comandos desde la ruta donde se encuentra el archivo &lt;strong&gt;docker-compose.yml&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker/inicioContenedor.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Si ejecutamos los siguientes comandos de docker podemos ver los datos de la imágen y el contenedor, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker images&lt;/code&gt; y &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker ps&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/docker/dockerPS.png&quot; /&gt;
-&lt;img src=&quot;../assets/images/docker/dockerIMAGES.png&quot; /&gt;&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Docker</summary></entry><entry><title type="html">Fuzzing Aplicaciones Web</title><link href="http://localhost:4000/fuzzing/" rel="alternate" type="text/html" title="Fuzzing Aplicaciones Web" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/fuzzing</id><content type="html" xml:base="http://localhost:4000/fuzzing/">&lt;h1 id=&quot;fuzzing-web&quot;&gt;Fuzzing Web&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-31T16:57:55+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad. Hacking ético. Scripting en Python. Herramientas de hacking</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Fuzzing Aplicaciones Web</title><link href="http://localhost:4000/fuzzing/" rel="alternate" type="text/html" title="Fuzzing Aplicaciones Web" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/fuzzing</id><content type="html" xml:base="http://localhost:4000/fuzzing/">&lt;h2 id=&quot;fuzzing-web&quot;&gt;Fuzzing Web&lt;/h2&gt;
 
 &lt;p&gt;El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta
 como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web.&lt;/p&gt;
@@ -109,7 +71,7 @@ nos ofrece la herramienta.&lt;/p&gt;
 &lt;p&gt;En este post hemos hablado sobre diferentes herramientas para poder realizar fuzzing sobre aplicaciones web, centrándonos en la búsqueda de directorios y archivos. Existen otras herramientas
 para realizar esta tarea durante la fase de enumeración. Os animo a profundizar más sobre estas herramientas, y descubrir algunas más y elegid aquella con la que os sintáis más cómod@s.&lt;/p&gt;
 
-&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Fuzzing</summary></entry><entry><title type="html">Scripting en Python III - requests</title><link href="http://localhost:4000/pythonIII-requests/" rel="alternate" type="text/html" title="Scripting en Python III - requests" /><published>2022-03-20T00:00:00+01:00</published><updated>2022-03-20T00:00:00+01:00</updated><id>http://localhost:4000/pythonIII-requests</id><content type="html" xml:base="http://localhost:4000/pythonIII-requests/">&lt;h2 id=&quot;python3---requests&quot;&gt;Python3 - requests&lt;/h2&gt;
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Fuzzing. Fuerza bruta contra directorios Herramientos para el descubrimiento de rutas en aplicaciones web</summary></entry><entry><title type="html">Scripting en Python III - requests</title><link href="http://localhost:4000/pythonIII-requests/" rel="alternate" type="text/html" title="Scripting en Python III - requests" /><published>2022-03-20T00:00:00+01:00</published><updated>2022-03-20T00:00:00+01:00</updated><id>http://localhost:4000/pythonIII-requests</id><content type="html" xml:base="http://localhost:4000/pythonIII-requests/">&lt;h2 id=&quot;python3---requests&quot;&gt;Python3 - requests&lt;/h2&gt;
 
 &lt;p&gt;Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada.
 Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando &lt;strong&gt;pip install requests&lt;/strong&gt;&lt;/p&gt;
@@ -1030,7 +992,7 @@ y continuar la navegación. Puedes desactivar el Intercept y navegar por la Web 
 
 &lt;p&gt;Hasta aquí una primera visión de Burp Suite. En próximos artículos iremos viendo que opciones nos trae esta herramienta imprescindible para auditorías Web.&lt;/p&gt;
 
-&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Burp Suite, la navaja suiza del pentester.</summary></entry><entry><title type="html">Nmap y pa’ dentro</title><link href="http://localhost:4000/nmap/" rel="alternate" type="text/html" title="Nmap y pa’ dentro" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/nmap</id><content type="html" xml:base="http://localhost:4000/nmap/">&lt;h2 id=&quot;-qué-es-nmap-&quot;&gt;¿ Qué es Nmap ?&lt;/h2&gt;
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Burp Suite, la navaja suiza del pentester. Uso y configuración de Burp Suite. Configuración del Proxy</summary></entry><entry><title type="html">Nmap</title><link href="http://localhost:4000/nmap/" rel="alternate" type="text/html" title="Nmap" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/nmap</id><content type="html" xml:base="http://localhost:4000/nmap/">&lt;h2 id=&quot;-qué-es-nmap-&quot;&gt;¿ Qué es Nmap ?&lt;/h2&gt;
 
 &lt;p&gt;Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo.
 Nmap viene instalado por defecto en Kali Linux.&lt;/p&gt;
@@ -1090,14 +1052,14 @@ seguido del nombre del archivo de salida.&lt;/p&gt;
   &lt;li&gt;Salida en todos los formatos (-oA).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Nmap tiene una infinidad de opciones que aquí no os he mostrado. Si quieres seguir investigando sobre esta herramienta te dejo por aquí el enlace a su página oficial, &lt;a href=&quot;https://nmap.org/&quot;&gt;nmap&lt;/a&gt;.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Uso y ejemplos de la herramienta Nmap</summary></entry><entry><title type="html">Que no te lo cuenten. Ataque Zero-Day</title><link href="http://localhost:4000/quenotelocuentem2/" rel="alternate" type="text/html" title="Que no te lo cuenten. Ataque Zero-Day" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuentem2</id><content type="html" xml:base="http://localhost:4000/quenotelocuentem2/">&lt;h2 id=&quot;-qué-es-un-ataque-zero-day-&quot;&gt;¿ Qué es un ataque Zero-Day ?&lt;/h2&gt;
+&lt;p&gt;Nmap tiene una infinidad de opciones que aquí no os he mostrado. Si quieres seguir investigando sobre esta herramienta te dejo por aquí el enlace a su página oficial, &lt;a href=&quot;https://nmap.org/&quot;&gt;nmap&lt;/a&gt;.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Uso y ejemplos de la herramienta Nmap. Escaneos de red con Nmap</summary></entry><entry><title type="html">Ataque Zero-Day</title><link href="http://localhost:4000/quenotelocuentem2/" rel="alternate" type="text/html" title="Ataque Zero-Day" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuentem2</id><content type="html" xml:base="http://localhost:4000/quenotelocuentem2/">&lt;h2 id=&quot;-qué-es-un-ataque-zero-day-&quot;&gt;¿ Qué es un ataque Zero-Day ?&lt;/h2&gt;
 
 &lt;p&gt;Un &lt;strong&gt; Ataque Zero-Day&lt;/strong&gt; es un ciberataque contra una aplicación o sistema que tiene como objetivo la ejecución de código
 malicioso gracias al conocimiento de una vulnerabilidad desconocida por el fabricante del producto; lo que supone que
 el fabricante del producto aún no ha corregido dicha vulnerabilidad.&lt;/p&gt;
 
 &lt;p&gt;Stuxnet es uno de los ejemplos más famosos de un ataque de día cero (Zero-Day). Se descubrió por primera vez en 2010. Este gusano informático malicioso
-fue famoso porque atacó los equipos digitales que controlan la producción de uranio enriquecido, usado para crear armas nucleares.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">¿Qué es un ataque Zero-Day?. Que no te lo cuenten.</summary></entry><entry><title type="html">Configuración del laboratorio de pruebas</title><link href="http://localhost:4000/laboratorio/" rel="alternate" type="text/html" title="Configuración del laboratorio de pruebas" /><published>2021-12-25T00:00:00+01:00</published><updated>2021-12-25T00:00:00+01:00</updated><id>http://localhost:4000/laboratorio</id><content type="html" xml:base="http://localhost:4000/laboratorio/">&lt;h2 id=&quot;instalación-de-virtual-box&quot;&gt;Instalación de Virtual Box&lt;/h2&gt;
+fue famoso porque atacó los equipos digitales que controlan la producción de uranio enriquecido, usado para crear armas nucleares.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">¿Qué es un ataque Zero-Day?</summary></entry><entry><title type="html">Laboratorio para hacking</title><link href="http://localhost:4000/laboratorio/" rel="alternate" type="text/html" title="Laboratorio para hacking" /><published>2021-12-25T00:00:00+01:00</published><updated>2021-12-25T00:00:00+01:00</updated><id>http://localhost:4000/laboratorio</id><content type="html" xml:base="http://localhost:4000/laboratorio/">&lt;h2 id=&quot;instalación-de-virtual-box&quot;&gt;Instalación de Virtual Box&lt;/h2&gt;
 
 &lt;p&gt;El primer paso para crear nuestro laboratorio es descargarnos &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtual Box&lt;/a&gt;, un software de virtualización para crear máquinas virtuales
 con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina virtual con cualquier otro sistema operativo
@@ -1257,4 +1219,22 @@ a la máquina virtual. Elige Linux en la opción Tipo y como versión elige Othe
 
 &lt;p&gt;¡¡¡ Hemos acabado !!! Ya tienes un laboratorio para realizar pruebas de seguridad y hacer Hacking de forma segura.&lt;/p&gt;
 
-&lt;p&gt;Configura el adaptador de red como hicimos en la máquina Kali.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">En esta sección encontrarás todo lo necesario para crear un laboratorio para pruebas de pentesting.</summary></entry></feed>
+&lt;p&gt;Configura el adaptador de red como hicimos en la máquina Kali.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Laboratorio para pruebas de seguridad informática. Instalación y configuración Virtual Box. Instalación Kali Linux.</summary></entry><entry><title type="html">Programa #Include</title><link href="http://localhost:4000/include/" rel="alternate" type="text/html" title="Programa #Include" /><published>2021-12-16T00:00:00+01:00</published><updated>2021-12-16T00:00:00+01:00</updated><id>http://localhost:4000/include</id><content type="html" xml:base="http://localhost:4000/include/">&lt;h2 id=&quot;la-fundación-goodjob&quot;&gt;La Fundación GoodJob&lt;/h2&gt;
+
+&lt;p&gt;La Fundación GoodJob desarrolla el Programa #Include con el objetivo de formar en seguridad informática a personas con discapacidad.
+Se trata de un programa de empleabilidad gratuito, que se desarrolla de forma online, destinado a desarrollar competencias en el sector de la ciberseguridad, 
+una de las profesiones más innovadoras y con más demanda de empleo en la actualidad.&lt;/p&gt;
+
+&lt;p&gt;El Programa #Include cuenta con la colaboración de varias instituciones:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;El Instituto Nacional de Ciberseguridad&lt;/li&gt;
+  &lt;li&gt;El Centro Criptológico Nacional&lt;/li&gt;
+  &lt;li&gt;La Comunidad de Madrid&lt;/li&gt;
+  &lt;li&gt;La Generalitat de Catalunya&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La primera edición del programa se realizó entre Mayo y Junio de 2020, y hasta la fecha se han realizado cuatro ediciones.
+El programa ha sido un éxito rotundo, consiguiento integrar a más del 80% de los alumnos en empresas colaboradoras, entre las que se incluyen Atos, Telefónica, s21sec, entre otras.&lt;/p&gt;
+
+&lt;p&gt;Se espera que durante los próximos años se realicen varias ediciones y que el número de empresas colaboradoras siga creciendo.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><summary type="html">Conoce el programa #Include creado por la Fundación GoodJob.</summary></entry></feed>

@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Que no te lo cuenten. Ataque Zero-Day"
-excerpt: "¿Qué es un ataque Zero-Day?. Que no te lo cuenten." 
+title: "Ataque Zero-Day"
+excerpt: "¿Qué es un ataque Zero-Day?" 
 date: 2022-01-01
 classes: wide
 ---

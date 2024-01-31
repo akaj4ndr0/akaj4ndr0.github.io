@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "Burp Suite"
-excerpt: "Burp Suite, la navaja suiza del pentester." 
+excerpt: "Burp Suite, la navaja suiza del pentester. Uso y configuración de Burp Suite. Configuración del Proxy" 
 date: 2022-01-07
 classes: wide
 ---

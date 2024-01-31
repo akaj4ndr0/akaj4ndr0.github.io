@@ -1,7 +1,8 @@
 ---
-title: "Sobre el proyecto"
+title: "Proyecto Programa #Include"
 layout: archive
 permalink: /proyecto/
+excerpt: "Programa Include. Fundación GoodJob"
 author_profile: true
 ---
 

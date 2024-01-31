@@ -3,6 +3,7 @@ layout: archive
 title: "About me"
 permalink: /about/
 date: 2022-01-15
+excerpt: "Javier González Sánchez. Ethical Hacker. Pentester"
 author_profile: true
 ---
 

@@ -4,17 +4,17 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/include/",
         "teaser":null},{
-        "title": "Configuración del laboratorio de pruebas",
+        "title": "Laboratorio para hacking",
         "excerpt":"Instalación de Virtual Box El primer paso para crear nuestro laboratorio es descargarnos Virtual Box, un software de virtualización para crear máquinas virtuales con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina virtual con cualquier otro sistema operativo...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/laboratorio/",
         "teaser":null},{
-        "title": "Nmap y pa' dentro",
+        "title": "Nmap",
         "excerpt":"¿ Qué es Nmap ? Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo. Nmap viene instalado por defecto en Kali Linux. Port Scanner Como hemos mencionado, con Nmap podemos ver que puertos están abiertos en un determinado...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/nmap/",
         "teaser":null},{
-        "title": "Que no te lo cuenten. Ataque Zero-Day",
+        "title": "Ataque Zero-Day",
         "excerpt":"¿ Qué es un ataque Zero-Day ? Un Ataque Zero-Day es un ciberataque contra una aplicación o sistema que tiene como objetivo la ejecución de código malicioso gracias al conocimiento de una vulnerabilidad desconocida por el fabricante del producto; lo que supone que el fabricante del producto aún no ha...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/quenotelocuentem2/",
@@ -48,9 +48,4 @@ var store = [{
         "excerpt":"Fuzzing Web El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web. Existen varias herramientas...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/fuzzing/",
-        "teaser":null},{
-        "title": "Docker Technology",
-        "excerpt":"Docker Docker es la tecnología de código abierto utilizado para desplegar aplicaciones dentro de contenedores. Esto va a permitir que varias aplicaciones funcionen en diferentes entornos. Podemos crear nuestras propias imágenes a través del archivo Dockerfile (no es el propósito de este post) o bien descargarlas directamente desde el repositorio...","categories": [],
-        "tags": [],
-        "url": "http://localhost:4000/docker/",
         "teaser":null}]

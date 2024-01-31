@@ -1,7 +1,7 @@
 ---
 layout: splash
-title: "Configuración del laboratorio de pruebas"
-excerpt: "En esta sección encontrarás todo lo necesario para crear un laboratorio para pruebas de pentesting." 
+title: "Laboratorio para hacking"
+excerpt: "Laboratorio para pruebas de seguridad informática. Instalación y configuración Virtual Box. Instalación Kali Linux." 
 date: 2021-12-25
 classes: wide
 ---
