@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Que no te lo cuenten. OWASP"
-excerpt: "¿Qué es OWASP? Open Web Application Security Proyect." 
+title: "Proyecto OWASP"
+excerpt: "¿Qué es OWASP? Open Web Application Security Proyect. Owasp Top Ten 2021" 
 date: 2022-01-23
 classes: wide
 ---
