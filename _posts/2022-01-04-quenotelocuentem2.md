@@ -4,6 +4,8 @@ title: "Ataque Zero-Day"
 excerpt: "¿Qué es un ataque Zero-Day?" 
 date: 2022-01-01
 classes: wide
+tags:
+  - Artículos
 ---
 ## ¿ Qué es un ataque Zero-Day ?
 

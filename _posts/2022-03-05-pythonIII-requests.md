@@ -4,6 +4,8 @@ title: "Scripting en Python III - requests"
 excerpt: "Módulo requests Python3." 
 date: 2022-03-20
 classes: wide	
+tags:
+  - Scripting
 ---
 ## Python3 - requests
 

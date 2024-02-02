@@ -5,11 +5,7 @@ main:
     url: /proyecto/
   - title: "Articulos"
     url: /year-archive/
-  - title: "Etiquetas"
-    url: /tags/
   - title: "Buscador"
     url: /buscador/
   - title: "About me"
     url: /about/
-
-

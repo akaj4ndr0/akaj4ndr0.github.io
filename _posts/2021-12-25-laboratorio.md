@@ -4,6 +4,8 @@ title: "Laboratorio para hacking"
 excerpt: "Laboratorio para pruebas de seguridad informática. Instalación y configuración Virtual Box. Instalación Kali Linux." 
 date: 2021-12-25
 classes: wide
+tags:
+  - Laboratorios
 ---
 ## Instalación de Virtual Box
 

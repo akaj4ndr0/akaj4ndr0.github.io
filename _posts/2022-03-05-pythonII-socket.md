@@ -4,6 +4,8 @@ title: "Scripting en Python II - socket"
 excerpt: "Módulo socket Python3." 
 date: 2022-03-05
 classes: wide
+tags:
+  - Scripting
 ---
 ## Python3 - socket
 

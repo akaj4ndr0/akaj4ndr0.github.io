@@ -18,7 +18,10 @@ Mi nombre es Javier González, actualmente trabajo como pentester en Eviden  des
 ## Esta es mi formación:
 
 - Certificación CEH EC-Council
+- WI250CP - Dynamic Application Security Testing (DAST) with WebInspect (Micro Focus)
+- FTSCA250-200 Fortify SCA and SSC (Micro Focus)
 - CPHE (Certificado Profesional de Hacking Ético - The Security Sentinel)
+- API Penetration Testing (APISEC University)
 - Hacking de Redes Inalámbricas (Mastermind)
 - Introducción al Hacking Ético (Mastermind)
 - Curso de OSINT para princiapiantes (Cyberhunteracademy)

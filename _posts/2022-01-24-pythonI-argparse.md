@@ -4,6 +4,8 @@ title: "Scripting en Python I - argparse"
 excerpt: "Módulo argparse Python3." 
 date: 2022-01-24
 classes: wide
+tags:
+  - Scripting
 ---
 ## Python3 - argparse
 
