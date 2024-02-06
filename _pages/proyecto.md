@@ -1,5 +1,5 @@
 ---
-title: "Proyecto Programa #Include"
+title: "Programa #Include"
 layout: archive
 permalink: /proyecto/
 excerpt: "Programa Include. Fundación GoodJob"

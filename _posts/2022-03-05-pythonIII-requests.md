@@ -7,7 +7,8 @@ classes: wide
 tags:
   - Scripting
 ---
-## Python3 - requests
+<br/>
+# Python - requests
 
 Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada.
 Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando <strong>pip install requests</strong>

@@ -9,7 +9,7 @@ author_profile: true
 
 <br>
 <p align="center">
-<img src="/assets/images/about/include.jpg">
+<img src="/assets/images/about/include.jpg" alt="Evento Include">
 </p>
 <br>
 

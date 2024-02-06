@@ -1,13 +1,14 @@
 ---
 layout: splash
 title: "Scripting en Python I - argparse"
-excerpt: "Módulo argparse Python3." 
+excerpt: "Módulo argparse Python." 
 date: 2022-01-24
 classes: wide
 tags:
   - Scripting
 ---
-## Python3 - argparse
+<br/>
+# Python - argparse
 
 Este post pretende ser una introducción al módulo <strong>argparse</strong> de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para
 construir procesadores de argumentos y opciones de línea de comando.
@@ -43,7 +44,7 @@ parser = argparse.ArgumentParser(description="Escaner de puertos",epilog="Ejempl
 ```
 Ahora ejecutamos nuestro script: ```python3 ejemplo_argparse.py```
 
-<img src="../assets/images/python/argparse/argumentParser.png">
+<img src="../assets/images/python/argparse/argumentParser.png" alt="argumentParser">
 
 Por defecto, ArgumentParser agrega una opción que simplemente muestra el mensaje de ayuda, -h y --help.
 
@@ -79,7 +80,7 @@ Hemos declarado la variable <strong>epilogo</strong> después de importar el mó
 Para formatear la salida y tener más control sobre cómo se muestran las descripciones textuales usamos el argumento ```formatter_class=argparser.RawDescriptionHelpFormatter```, de lo contrario
 se mostraría todo en una línea.
 
-<img src="../assets/images/python/argparse/epilog.png">
+<img src="../assets/images/python/argparse/epilog.png" alt="epilog">
 
 Otros argumentos que permite ArgumentParser son:
 - <strong>prog</strong>, determina el nombre del programa.
@@ -126,11 +127,11 @@ print(params.target)
 
 ```
 
-<img src="../assets/images/python/argparse/posicional.png">
+<img src="../assets/images/python/argparse/posicional.png" alt="posicional">
 
 Nos lanza un error porque no establecimos el argumento target. Ahora ejecutamos el script pasándole un objetivo.
 
-<img src="../assets/images/python/argparse/posicional2.png">
+<img src="../assets/images/python/argparse/posicional2.png" alt="posicional 2">
 
 Como se aprecia en la imagen el script se ejecutó sin errores y mostró el objetivo.
 
@@ -167,9 +168,9 @@ print(params.t)
 ```
 Si ejecutamos el script sin usar el argumento -t, el script no lanzará ningún error, ya que este argumento es opcional.
 
-<img src="../assets/images/python/argparse/opcional.png">
+<img src="../assets/images/python/argparse/opcional.png" alt="argumento posicional">
 
-<img src="../assets/images/python/argparse/opcional2.png">
+<img src="../assets/images/python/argparse/opcional2.png" alt="argumento posicional 2">
 
 También podemos especificar el argumento usando las flags - y -- al mismo tiempo. En este caso, para imprimir el valor del argumento, usaremos el nombre de la flag --, ya sea usando - o -- cuando ejecutemos el script.
 Vamos a verlo.
@@ -207,7 +208,7 @@ print(params.target)
 
 Aquí vemos que podemos llamar al argumento con la versión corta -t o la versión larga --target. En la función print() usamos params.target independientemente de como ejecutemos el script.
 
-<img src="../assets/images/python/argparse/dobleflag.png">
+<img src="../assets/images/python/argparse/dobleflag.png" alt="dobleflag">
 
 Al igual que ArgumentParser(), add_argument() también admite unos atributos mediante clave:valor para trabajar con los argumentos. Algunos de ellos son:
 - <strong>action</strong>, la acción que se realizará cuando se encuentre este argumento en la línea de comandos. Las acciones que puede tomar el argumento son:
@@ -261,7 +262,7 @@ for port in params.ports:
  ```
 Al llamar varias veces al argumento -p o --ports se crea una lista de puertos que se muestran por consola.
 
-<img src="../assets/images/python/argparse/action_append.png">
+<img src="../assets/images/python/argparse/action_append.png" alt="action append">
 
   - <strong>count</strong>, cuenta el número de veces que ocurre un argumento
 
@@ -296,7 +297,7 @@ params = parser.parse_args()
 
 print(params.verbosity)
 ```
-<img src="../assets/images/python/argparse/action_verbosidad.png">
+<img src="../assets/images/python/argparse/action_verbosidad.png" alt="action verbosidad">
 
 
 - <strong>nargs</strong>, número de argumentos que deben de aparecer en la línea de comandos. Estos argumentos se agregan a una lista.
@@ -342,9 +343,9 @@ print(params.target)
 Aquí introducimos un concepto nuevo, atributo con clave <strong>default</strong>. Esto significa que si no se especifica el parámetro --target, por defecto el valor será el que
 asignemos a la clave <strong>default</strong>. Si se especifica el argumento en la línea de comandos se asignará el valor pasado.
 
-<img src="../assets/images/python/argparse/nargs_interrogacion.png">
+<img src="../assets/images/python/argparse/nargs_interrogacion.png" alt="nargs interrogación">
 
-<img src="../assets/images/python/argparse/nargs_interrogacion2.png">
+<img src="../assets/images/python/argparse/nargs_interrogacion2.png" alt="nargs interrogación 2">
 
 <strong>Script con nargs="*"</strong>
 ```bash
@@ -382,7 +383,7 @@ for target in params.target:
 Recordemos que en este caso podemos asignar cero o varios argumentos. Si se ñade más de un argumento los datos se guardarán en una lista. Si no se pasa ninǵun argumento
 por defecto mostrará el valor pasado en el atributo con clave default.
 
-<img src="../assets/images/python/argparse/nargs_asterisco.png">
+<img src="../assets/images/python/argparse/nargs_asterisco.png" alt="nargs asterisco">
 
 <strong>Script con nargs="+".</strong>
 
@@ -413,7 +414,7 @@ parser.add_argument("--target",nargs="+",default="227.0.0.1")
 
 params = parser.parse_args()
 ```
-<img src="../assets/images/python/argparse/nargs_suma.png">
+<img src="../assets/images/python/argparse/nargs_suma.png" alt="nargs suma">
 
 El script lanza un mensaje de error avisando que no se especificó al menos un argumento.
 
@@ -446,7 +447,7 @@ parser.add_argument("--target",nargs=2)
 
 params = parser.parse_args()
 ```
-<img src="../assets/images/python/argparse/nargs_suma.png">
+<img src="../assets/images/python/argparse/nargs_suma.png" alt="nargs suma 2">
 
 El script muestra un mensaje de error si no se indican dos argumentos.
 
@@ -486,7 +487,7 @@ params = parser.parse_args()
 
 print(params.verbosity)
 ```
-<img src="../assets/images/python/argparse/choices.png">
+<img src="../assets/images/python/argparse/choices.png" alt="choices">
 
 Si el argumento no coincide con los valores establecidos en el atributo <strong>choices</strong> el script muestra un mensaje de error.
 
@@ -578,7 +579,7 @@ if params.fast == True:
 	print("\nSe ha seleccionado un escaneo rápido")
 ```
 
-<img src="../assets/images/python/argparse/script_final.png">
+<img src="../assets/images/python/argparse/script_final.png" alt="script">
 
 
 Para quien esté interesado en profundizar más sobre este módulo os recomiendo visitar [https://docs.python.org/3/library/argparse.html](https://docs.python.org/3/library/argparse.html).

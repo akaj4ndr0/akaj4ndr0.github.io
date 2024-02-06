@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Nmap - CiberBlog</title>
+<!-- begin _includes/seo.html --><title>Escaneo de puertos con Nmap - CiberBlog</title>
 <meta name="description" content="Uso y ejemplos de la herramienta Nmap. Escaneos de red con Nmap">
 
 
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="es_SPA">
 <meta property="og:site_name" content="CiberBlog">
-<meta property="og:title" content="Nmap">
+<meta property="og:title" content="Escaneo de puertos con Nmap">
 <meta property="og:url" content="http://localhost:4000/nmap/">
 
 
@@ -103,9 +103,9 @@
 <!-- end custom head snippets -->
 
     <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Nmap | CiberBlog</title>
+<title>Escaneo de puertos con Nmap | CiberBlog</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Nmap" />
+<meta property="og:title" content="Escaneo de puertos con Nmap" />
 <meta name="author" content="Javier Gonzalez" />
 <meta property="og:locale" content="es_SPA" />
 <meta name="description" content="Uso y ejemplos de la herramienta Nmap. Escaneos de red con Nmap" />
@@ -116,11 +116,11 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-01-01T00:00:00+01:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Nmap" />
+<meta property="twitter:title" content="Escaneo de puertos con Nmap" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@akaj4ndr0" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nmap/"},"url":"http://localhost:4000/nmap/","author":{"@type":"Person","name":"Javier Gonzalez"},"headline":"Nmap","dateModified":"2022-01-01T00:00:00+01:00","datePublished":"2022-01-01T00:00:00+01:00","@type":"BlogPosting","description":"Uso y ejemplos de la herramienta Nmap. Escaneos de red con Nmap","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/nmap/"},"url":"http://localhost:4000/nmap/","author":{"@type":"Person","name":"Javier Gonzalez"},"headline":"Escaneo de puertos con Nmap","dateModified":"2022-01-01T00:00:00+01:00","datePublished":"2022-01-01T00:00:00+01:00","@type":"BlogPosting","description":"Uso y ejemplos de la herramienta Nmap. Escaneos de red con Nmap","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -168,13 +168,14 @@
 
 <div id="main" role="main">
   <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Nmap">
+    <meta itemprop="headline" content="Escaneo de puertos con Nmap">
     <meta itemprop="description" content="Uso y ejemplos de la herramienta Nmap. Escaneos de red con Nmap">
     <meta itemprop="datePublished" content="January 01, 2022">
     
 
     <section class="page__content" itemprop="text">
-      <h2 id="-qué-es-nmap-">¿ Qué es Nmap ?</h2>
+      <p><br /></p>
+<h1 id="-qué-es-nmap-">¿ Qué es Nmap ?</h1>
 
 <p>Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo.
 Nmap viene instalado por defecto en Kali Linux.</p>
@@ -198,29 +199,29 @@ puertos y servicios se están ejecutando en la máquina vulnerable Metasploitabl
 
 <p>Ejecuta el comando <code class="language-plaintext highlighter-rouge">ip a</code> o <code class="language-plaintext highlighter-rouge">ifconfig</code> desde la terminal en cada una de las máquinas para ver la dirección IP asignada.</p>
 
-<p><img src="../assets/images/nmap/ip-kali.png" /></p>
+<p><img src="../assets/images/nmap/ip-kali.png" alt="ipkali" /></p>
 
-<p><img src="../assets/images/nmap/ip-metasploitable.png" /></p>
+<p><img src="../assets/images/nmap/ip-metasploitable.png" alt="ipmetasploitable" /></p>
 
 <p>Ahora tenemos las IPs de nuestras máquinas, en mi caso la 10.0.2.15 para Kali y la 10.0.2.5 para Metasploitable2.</p>
 
 <p>El escaneo más básico para el reconocimiento de puertos con nmap es el comando <code class="language-plaintext highlighter-rouge">nmap ip_objetivo</code>.</p>
 
-<p><img src="../assets/images/nmap/nmap-basic.png" /></p>
+<p><img src="../assets/images/nmap/nmap-basic.png" alt="nmap basic" /></p>
 
 <p>Podemos observar en la parte inferior derecha el tiempo que tomó nmap para el escaneo de puertos: 13.09s. Ahora bien, con el parámetro <code class="language-plaintext highlighter-rouge">-n</code> de nmap podemos reducir el tiempo de scaneo. Este parámetro hace
 que nmap no realice resolución DNS lo que reduce bastante el tiempo.</p>
 
-<p><img src="../assets/images/nmap/nmap-n.png" /></p>
+<p><img src="../assets/images/nmap/nmap-n.png" alt="nmap n" /></p>
 
 <p>De forma predeterminada nmap solo escanea los 1000 puertos más comunes para cada protocolo. Con el parámetro <code class="language-plaintext highlighter-rouge">-p</code> podemos indicar qué puertos queremos escanear separados por coma. Para indicar que queremos escanear todos los puertos
 podemor ejecutar <code class="language-plaintext highlighter-rouge">nmap -n -p- ip_objetivo</code>.</p>
 
-<p><img src="../assets/images/nmap/nmap-allports.png" /></p>
+<p><img src="../assets/images/nmap/nmap-allports.png" alt="nmap allports" /></p>
 
 <p>Para ver las versiones de los servicios que se están ejecutando usamos el parámetro <code class="language-plaintext highlighter-rouge">-sV</code></p>
 
-<p><img src="../assets/images/nmap/nmap-versiones.png" /></p>
+<p><img src="../assets/images/nmap/nmap-versiones.png" alt="nmap versiones" /></p>
 
 <p>Ahora Nmap muestra otra columna “VERSION”, con información de las versiones de los servicios. Esta información es muy valiosa para ver versiones vulnerables de los servicos que se ejecutan.</p>
 
@@ -242,7 +243,7 @@ seguido del nombre del archivo de salida.</p>
 
   <nav class="pagination">
     
-      <a href="/laboratorio/" class="pagination--pager" title="Laboratorio para hacking
+      <a href="/laboratorio/" class="pagination--pager" title="Cómo crear un laboratorio para hacking
 ">Previous</a>
     
     

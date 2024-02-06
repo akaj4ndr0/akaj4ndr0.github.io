@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-02T09:42:06+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad. Hacking ético. Scripting en Python. Herramientas de hacking</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Fuzzing Aplicaciones Web</title><link href="http://localhost:4000/fuzzing/" rel="alternate" type="text/html" title="Fuzzing Aplicaciones Web" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/fuzzing</id><content type="html" xml:base="http://localhost:4000/fuzzing/">&lt;h2 id=&quot;fuzzing-web&quot;&gt;Fuzzing Web&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-06T16:38:59+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CiberBlog</title><subtitle>Blog de ciberseguridad. Hacking ético. Scripting en Python. Herramientas de hacking</subtitle><author><name>Javier Gonzalez</name></author><entry><title type="html">Qué es el fuzzing</title><link href="http://localhost:4000/fuzzing/" rel="alternate" type="text/html" title="Qué es el fuzzing" /><published>2022-06-01T00:00:00+02:00</published><updated>2022-06-01T00:00:00+02:00</updated><id>http://localhost:4000/fuzzing</id><content type="html" xml:base="http://localhost:4000/fuzzing/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;qué-es-el-fuzzing&quot;&gt;Qué es el fuzzing&lt;/h1&gt;
 
 &lt;p&gt;El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta
 como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web.&lt;/p&gt;
@@ -71,7 +72,8 @@ nos ofrece la herramienta.&lt;/p&gt;
 &lt;p&gt;En este post hemos hablado sobre diferentes herramientas para poder realizar fuzzing sobre aplicaciones web, centrándonos en la búsqueda de directorios y archivos. Existen otras herramientas
 para realizar esta tarea durante la fase de enumeración. Os animo a profundizar más sobre estas herramientas, y descubrir algunas más y elegid aquella con la que os sintáis más cómod@s.&lt;/p&gt;
 
-&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Hacking Web" /><category term="Herramientas" /><category term="Pentesting" /><summary type="html">Fuzzing. Fuerza bruta contra directorios Herramientos para el descubrimiento de rutas en aplicaciones web</summary></entry><entry><title type="html">Scripting en Python III - requests</title><link href="http://localhost:4000/pythonIII-requests/" rel="alternate" type="text/html" title="Scripting en Python III - requests" /><published>2022-03-20T00:00:00+01:00</published><updated>2022-03-20T00:00:00+01:00</updated><id>http://localhost:4000/pythonIII-requests</id><content type="html" xml:base="http://localhost:4000/pythonIII-requests/">&lt;h2 id=&quot;python3---requests&quot;&gt;Python3 - requests&lt;/h2&gt;
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Hacking Web" /><category term="Herramientas" /><category term="Pentesting" /><summary type="html">Fuzzing. Fuerza bruta contra directorios. Herramientos para el descubrimiento de rutas en aplicaciones web</summary></entry><entry><title type="html">Scripting en Python III - requests</title><link href="http://localhost:4000/pythonIII-requests/" rel="alternate" type="text/html" title="Scripting en Python III - requests" /><published>2022-03-20T00:00:00+01:00</published><updated>2022-03-20T00:00:00+01:00</updated><id>http://localhost:4000/pythonIII-requests</id><content type="html" xml:base="http://localhost:4000/pythonIII-requests/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;python---requests&quot;&gt;Python - requests&lt;/h1&gt;
 
 &lt;p&gt;Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada.
 Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando &lt;strong&gt;pip install requests&lt;/strong&gt;&lt;/p&gt;
@@ -330,7 +332,8 @@ params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span 
 		sys.exit&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Scripting" /><summary type="html">Módulo socket Python3.</summary></entry><entry><title type="html">Scripting en Python I - argparse</title><link href="http://localhost:4000/pythonI-argparse/" rel="alternate" type="text/html" title="Scripting en Python I - argparse" /><published>2022-01-24T00:00:00+01:00</published><updated>2022-01-24T00:00:00+01:00</updated><id>http://localhost:4000/pythonI-argparse</id><content type="html" xml:base="http://localhost:4000/pythonI-argparse/">&lt;h2 id=&quot;python3---argparse&quot;&gt;Python3 - argparse&lt;/h2&gt;
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Scripting" /><summary type="html">Módulo socket Python3.</summary></entry><entry><title type="html">Scripting en Python I - argparse</title><link href="http://localhost:4000/pythonI-argparse/" rel="alternate" type="text/html" title="Scripting en Python I - argparse" /><published>2022-01-24T00:00:00+01:00</published><updated>2022-01-24T00:00:00+01:00</updated><id>http://localhost:4000/pythonI-argparse</id><content type="html" xml:base="http://localhost:4000/pythonI-argparse/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;python---argparse&quot;&gt;Python - argparse&lt;/h1&gt;
 
 &lt;p&gt;Este post pretende ser una introducción al módulo &lt;strong&gt;argparse&lt;/strong&gt; de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para
 construir procesadores de argumentos y opciones de línea de comando.&lt;/p&gt;
@@ -366,7 +369,7 @@ parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Ahora ejecutamos nuestro script: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python3 ejemplo_argparse.py&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/argumentParser.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/argumentParser.png&quot; alt=&quot;argumentParser&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por defecto, ArgumentParser agrega una opción que simplemente muestra el mensaje de ayuda, -h y –help.&lt;/p&gt;
 
@@ -401,7 +404,7 @@ parser &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; argparse.ArgumentParser&lt
 &lt;p&gt;Para formatear la salida y tener más control sobre cómo se muestran las descripciones textuales usamos el argumento &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;formatter_class=argparser.RawDescriptionHelpFormatter&lt;/code&gt;, de lo contrario
 se mostraría todo en una línea.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/epilog.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/epilog.png&quot; alt=&quot;epilog&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Otros argumentos que permite ArgumentParser son:&lt;/p&gt;
 &lt;ul&gt;
@@ -449,11 +452,11 @@ print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.target&lt;span class=&
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/posicional.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/posicional.png&quot; alt=&quot;posicional&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nos lanza un error porque no establecimos el argumento target. Ahora ejecutamos el script pasándole un objetivo.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/posicional2.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/posicional2.png&quot; alt=&quot;posicional 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Como se aprecia en la imagen el script se ejecutó sin errores y mostró el objetivo.&lt;/p&gt;
 
@@ -489,9 +492,9 @@ print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.t&lt;span class=&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Si ejecutamos el script sin usar el argumento -t, el script no lanzará ningún error, ya que este argumento es opcional.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/opcional.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/opcional.png&quot; alt=&quot;argumento posicional&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/opcional2.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/opcional2.png&quot; alt=&quot;argumento posicional 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;También podemos especificar el argumento usando las flags - y – al mismo tiempo. En este caso, para imprimir el valor del argumento, usaremos el nombre de la flag –, ya sea usando - o – cuando ejecutemos el script.
 Vamos a verlo.&lt;/p&gt;
@@ -528,7 +531,7 @@ print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.target&lt;span class=&
 
 &lt;p&gt;Aquí vemos que podemos llamar al argumento con la versión corta -t o la versión larga –target. En la función print() usamos params.target independientemente de como ejecutemos el script.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/dobleflag.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/dobleflag.png&quot; alt=&quot;dobleflag&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Al igual que ArgumentParser(), add_argument() también admite unos atributos mediante clave:valor para trabajar con los argumentos. Algunos de ellos son:&lt;/p&gt;
 &lt;ul&gt;
@@ -587,7 +590,7 @@ params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Al llamar varias veces al argumento -p o –ports se crea una lista de puertos que se muestran por consola.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/action_append.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/action_append.png&quot; alt=&quot;action append&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;count&lt;/strong&gt;, cuenta el número de veces que ocurre un argumento&lt;/li&gt;
@@ -623,7 +626,7 @@ params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span 
 
 print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.verbosity&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/action_verbosidad.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/action_verbosidad.png&quot; alt=&quot;action verbosidad&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -673,9 +676,9 @@ print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.target&lt;span class=&
 &lt;p&gt;Aquí introducimos un concepto nuevo, atributo con clave &lt;strong&gt;default&lt;/strong&gt;. Esto significa que si no se especifica el parámetro –target, por defecto el valor será el que
 asignemos a la clave &lt;strong&gt;default&lt;/strong&gt;. Si se especifica el argumento en la línea de comandos se asignará el valor pasado.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_interrogacion.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_interrogacion.png&quot; alt=&quot;nargs interrogación&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_interrogacion2.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_interrogacion2.png&quot; alt=&quot;nargs interrogación 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Script con nargs=”*”&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
@@ -712,7 +715,7 @@ params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span 
 &lt;p&gt;Recordemos que en este caso podemos asignar cero o varios argumentos. Si se ñade más de un argumento los datos se guardarán en una lista. Si no se pasa ninǵun argumento
 por defecto mostrará el valor pasado en el atributo con clave default.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_asterisco.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_asterisco.png&quot; alt=&quot;nargs asterisco&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Script con nargs=”+”.&lt;/strong&gt;&lt;/p&gt;
 
@@ -742,7 +745,7 @@ parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=
 
 params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_suma.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_suma.png&quot; alt=&quot;nargs suma&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;El script lanza un mensaje de error avisando que no se especificó al menos un argumento.&lt;/p&gt;
 
@@ -774,7 +777,7 @@ parser.add_argument&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=
 
 params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_suma.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/nargs_suma.png&quot; alt=&quot;nargs suma 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;El script muestra un mensaje de error si no se indican dos argumentos.&lt;/p&gt;
 
@@ -815,7 +818,7 @@ params &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; parser.parse_args&lt;span 
 
 print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;params.verbosity&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/choices.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/choices.png&quot; alt=&quot;choices&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Si el argumento no coincide con los valores establecidos en el atributo &lt;strong&gt;choices&lt;/strong&gt; el script muestra un mensaje de error.&lt;/p&gt;
 
@@ -908,11 +911,12 @@ puertos &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; params.port.split&lt;span
 	print&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Se ha seleccionado un escaneo rápido&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/script_final.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/python/argparse/script_final.png&quot; alt=&quot;script&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para quien esté interesado en profundizar más sobre este módulo os recomiendo visitar &lt;a href=&quot;https://docs.python.org/3/library/argparse.html&quot;&gt;https://docs.python.org/3/library/argparse.html&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Scripting" /><summary type="html">Módulo argparse Python3.</summary></entry><entry><title type="html">Proyecto OWASP</title><link href="http://localhost:4000/quenotelocuenOwasp/" rel="alternate" type="text/html" title="Proyecto OWASP" /><published>2022-01-23T00:00:00+01:00</published><updated>2022-01-23T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuenOwasp</id><content type="html" xml:base="http://localhost:4000/quenotelocuenOwasp/">&lt;h2 id=&quot;-qué-es-el-proyecto-owasp-&quot;&gt;¿ Qué es el proyecto OWASP ?&lt;/h2&gt;
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Scripting" /><summary type="html">Módulo argparse Python.</summary></entry><entry><title type="html">Qué es OWASP</title><link href="http://localhost:4000/quenotelocuenOwasp/" rel="alternate" type="text/html" title="Qué es OWASP" /><published>2022-01-23T00:00:00+01:00</published><updated>2022-01-23T00:00:00+01:00</updated><id>http://localhost:4000/quenotelocuenOwasp</id><content type="html" xml:base="http://localhost:4000/quenotelocuenOwasp/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;-qué-es-el-proyecto-owasp-&quot;&gt;¿ Qué es el proyecto OWASP ?&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;OWASP&lt;/strong&gt; (Open Web Application Security Proyect), es un proyecto abierto de seguridad de aplicaciones Web. La comunidad OWASP está formada por empresas, organizaciones educativas y
 particulares de todo el mundo. Proporciona una base para probar los controles técnicos de seguridad de las aplicaciones Web.&lt;/p&gt;
@@ -920,11 +924,12 @@ particulares de todo el mundo. Proporciona una base para probar los controles t�
 &lt;p&gt;OWASP establece y explica las diez vulnerabilidades más importantes que pueden aparecer en un sitio web a través de un documento concocido como el OWASP Top Ten. Su útlima versión es la de 2021, la cual
 ha establecido una serie de cambios respecto a su anterior versión de 2017. La siguiente imagen muestra los cambios introducidos en la versión de 2021.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/owasp.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/owasp.png&quot; alt=&quot;owasp top ten 21&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Si quieres saber más sobre este proyecto visita la página de la fundación &lt;a href=&quot;https://owasp.org/&quot;&gt;Owasp&lt;/a&gt;.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Artículos" /><category term="Guías" /><summary type="html">¿Qué es OWASP? Open Web Application Security Proyect. Owasp Top Ten 2021</summary></entry><entry><title type="html">Burp Suite</title><link href="http://localhost:4000/burpsuite/" rel="alternate" type="text/html" title="Burp Suite" /><published>2022-01-07T00:00:00+01:00</published><updated>2022-01-07T00:00:00+01:00</updated><id>http://localhost:4000/burpsuite</id><content type="html" xml:base="http://localhost:4000/burpsuite/">&lt;h2 id=&quot;-qué-es-burp-suite-&quot;&gt;¿ Qué es Burp Suite ?&lt;/h2&gt;
+&lt;p&gt;Si quieres saber más sobre este proyecto visita la página de la fundación &lt;a href=&quot;https://owasp.org/&quot;&gt;Owasp&lt;/a&gt;.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Artículos" /><category term="Guías" /><summary type="html">Open Web Application Security Proyect. Owasp Top Ten 2021</summary></entry><entry><title type="html">Burp Suite</title><link href="http://localhost:4000/burpsuite/" rel="alternate" type="text/html" title="Burp Suite" /><published>2022-01-07T00:00:00+01:00</published><updated>2022-01-07T00:00:00+01:00</updated><id>http://localhost:4000/burpsuite</id><content type="html" xml:base="http://localhost:4000/burpsuite/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;-qué-es-burp-suite-&quot;&gt;¿ Qué es Burp Suite ?&lt;/h1&gt;
 
-&lt;p&gt;Burp Suite es considerada la navaja suiza del pentester. Es una herramienta utilizada en auditorías de seguridad de aplicaciones Web. Un proxy de interceptación
+&lt;p&gt;Burp Suite se considerada la navaja suiza del pentester. Es una herramienta utilizada en auditorías de seguridad de aplicaciones Web. Un proxy de interceptación
 para el análisis y edición del tráfico Web. Con Burp Suite se pueden interceptar las peticiones y respuestas, leerlas y editarlas en tiempo real antes de que lleguen
 a su destino final.&lt;/p&gt;
 
@@ -935,17 +940,17 @@ Kali Linux trae por defecto la versión gratuita de Burp Suite. Si aún no tiene
 
 &lt;p&gt;Puedes abrir Burp desde la terminal con el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;burpsuite&lt;/code&gt;. Una vez iniciado asegúrate de que el proxy esté escuchando en el puerto &lt;strong&gt;8080&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy.png&quot; alt=&quot;configuración del proxy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Te recomiendo que instales la extensión &lt;a href=&quot;https://addons.mozilla.org/es/firefox/addon/foxyproxy-standard/&quot;&gt;FoxyProxy&lt;/a&gt; para Firefox. Esta extensión te permite configurar el proxy del navegador de una forma más rápida.&lt;/p&gt;
 
 &lt;p&gt;Una vez instalada, abre la extensión y sigue estos pasos para configurar el proxy de tal forma que las peticiones pasen por Burp Suite.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy1.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy1.png&quot; alt=&quot;foxyproxy&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy3.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy3.png&quot; alt=&quot;configurando foxyproxy&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy4.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/foxyproxy4.png&quot; alt=&quot;activando el proxy desde la extensión&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora puedes activar o desactivar el proxy Burp Suite desde la extensión cuando quieras.&lt;/p&gt;
 
@@ -953,46 +958,47 @@ Kali Linux trae por defecto la versión gratuita de Burp Suite. Si aún no tiene
 
 &lt;p&gt;Descarga el certificado y sigue los siguientes pasos:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy2.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy2.png&quot; alt=&quot;descargando el certificado de burp&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En ajustes del navegador, busca los certificados instalados.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy3.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy3.png&quot; alt=&quot;añadiendo el certificado al navegador&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Elige la opción importar y selecciona el fichero con extensión .der descargado.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy4.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy4.png&quot; alt=&quot;importando certificado&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy5.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy5.png&quot; alt=&quot;importando certificado 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Marca las dos casillas de la ventana emergente y pulsa ok.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy6.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/proxy6.png&quot; alt=&quot;importando certificado 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;¡Bien hecho!. Ya tienes configurado Burp Suite para dar los primeros pasos, vamos a ello.&lt;/p&gt;
 
 &lt;p&gt;Cada vez que inicies Burp Suite, el Intercept del proxy está en ON, esto significa que si quieres navegar por la página web tendrás que hacer click en Forward para que la petición llegue a su destino
 y continuar la navegación. Puedes desactivar el Intercept y navegar por la Web y activarlo cuando quieras ver o editar la petición.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/intercept_on.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/intercept_on.png&quot; alt=&quot;intercept on burpsuite&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Otra opción interesante es la pestaña HTTP history de proxy, la cual muestra el historial de las peticiones.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/history_proxy.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/history_proxy.png&quot; alt=&quot;historial del proxy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Es recomendable asignar el Scope en la pestaña Target de Burp Suite.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/target.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/target.png&quot; alt=&quot;target&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Esto evitará a que se muestre en el historial las peticiones que no estén dentro del Scope a analizar.&lt;/p&gt;
 
 &lt;p&gt;Cuando le des a aceptar se mostrará una ventana emergente. Dale a YES para que Burp no registre otras URLs distintas al objetivo en el historial.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/target2.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/burpsuite/target2.png&quot; alt=&quot;target 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Hasta aquí una primera visión de Burp Suite. En próximos artículos iremos viendo que opciones nos trae esta herramienta imprescindible para auditorías Web.&lt;/p&gt;
 
-&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Herramientas" /><category term="Proxy" /><category term="Hacking Web" /><category term="Pentesting" /><summary type="html">Burp Suite, la navaja suiza del pentester. Uso y configuración de Burp Suite. Configuración del Proxy</summary></entry><entry><title type="html">Nmap</title><link href="http://localhost:4000/nmap/" rel="alternate" type="text/html" title="Nmap" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/nmap</id><content type="html" xml:base="http://localhost:4000/nmap/">&lt;h2 id=&quot;-qué-es-nmap-&quot;&gt;¿ Qué es Nmap ?&lt;/h2&gt;
+&lt;p&gt;Hasta la próxima.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Herramientas" /><category term="Proxy" /><category term="Hacking Web" /><category term="Pentesting" /><summary type="html">Burp Suite, la navaja suiza del pentester. Uso y configuración de Burp Suite</summary></entry><entry><title type="html">Escaneo de puertos con Nmap</title><link href="http://localhost:4000/nmap/" rel="alternate" type="text/html" title="Escaneo de puertos con Nmap" /><published>2022-01-01T00:00:00+01:00</published><updated>2022-01-01T00:00:00+01:00</updated><id>http://localhost:4000/nmap</id><content type="html" xml:base="http://localhost:4000/nmap/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;-qué-es-nmap-&quot;&gt;¿ Qué es Nmap ?&lt;/h1&gt;
 
 &lt;p&gt;Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo.
 Nmap viene instalado por defecto en Kali Linux.&lt;/p&gt;
@@ -1016,29 +1022,29 @@ puertos y servicios se están ejecutando en la máquina vulnerable Metasploitabl
 
 &lt;p&gt;Ejecuta el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ip a&lt;/code&gt; o &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ifconfig&lt;/code&gt; desde la terminal en cada una de las máquinas para ver la dirección IP asignada.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/ip-kali.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/ip-kali.png&quot; alt=&quot;ipkali&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/ip-metasploitable.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/ip-metasploitable.png&quot; alt=&quot;ipmetasploitable&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora tenemos las IPs de nuestras máquinas, en mi caso la 10.0.2.15 para Kali y la 10.0.2.5 para Metasploitable2.&lt;/p&gt;
 
 &lt;p&gt;El escaneo más básico para el reconocimiento de puertos con nmap es el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap ip_objetivo&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-basic.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-basic.png&quot; alt=&quot;nmap basic&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Podemos observar en la parte inferior derecha el tiempo que tomó nmap para el escaneo de puertos: 13.09s. Ahora bien, con el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-n&lt;/code&gt; de nmap podemos reducir el tiempo de scaneo. Este parámetro hace
 que nmap no realice resolución DNS lo que reduce bastante el tiempo.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-n.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-n.png&quot; alt=&quot;nmap n&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;De forma predeterminada nmap solo escanea los 1000 puertos más comunes para cada protocolo. Con el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-p&lt;/code&gt; podemos indicar qué puertos queremos escanear separados por coma. Para indicar que queremos escanear todos los puertos
 podemor ejecutar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nmap -n -p- ip_objetivo&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-allports.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-allports.png&quot; alt=&quot;nmap allports&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para ver las versiones de los servicios que se están ejecutando usamos el parámetro &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-sV&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-versiones.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/nmap/nmap-versiones.png&quot; alt=&quot;nmap versiones&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora Nmap muestra otra columna “VERSION”, con información de las versiones de los servicios. Esta información es muy valiosa para ver versiones vulnerables de los servicos que se ejecutan.&lt;/p&gt;
 
@@ -1059,7 +1065,10 @@ malicioso gracias al conocimiento de una vulnerabilidad desconocida por el fabri
 el fabricante del producto aún no ha corregido dicha vulnerabilidad.&lt;/p&gt;
 
 &lt;p&gt;Stuxnet es uno de los ejemplos más famosos de un ataque de día cero (Zero-Day). Se descubrió por primera vez en 2010. Este gusano informático malicioso
-fue famoso porque atacó los equipos digitales que controlan la producción de uranio enriquecido, usado para crear armas nucleares.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Artículos" /><summary type="html">¿Qué es un ataque Zero-Day?</summary></entry><entry><title type="html">Laboratorio para hacking</title><link href="http://localhost:4000/laboratorio/" rel="alternate" type="text/html" title="Laboratorio para hacking" /><published>2021-12-25T00:00:00+01:00</published><updated>2021-12-25T00:00:00+01:00</updated><id>http://localhost:4000/laboratorio</id><content type="html" xml:base="http://localhost:4000/laboratorio/">&lt;h2 id=&quot;instalación-de-virtual-box&quot;&gt;Instalación de Virtual Box&lt;/h2&gt;
+fue famoso porque atacó los equipos digitales que controlan la producción de uranio enriquecido, usado para crear armas nucleares.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Artículos" /><summary type="html">¿Qué es un ataque Zero-Day?</summary></entry><entry><title type="html">Cómo crear un laboratorio para hacking</title><link href="http://localhost:4000/laboratorio/" rel="alternate" type="text/html" title="Cómo crear un laboratorio para hacking" /><published>2021-12-25T00:00:00+01:00</published><updated>2021-12-25T00:00:00+01:00</updated><id>http://localhost:4000/laboratorio</id><content type="html" xml:base="http://localhost:4000/laboratorio/">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;cómo-crear--un-laboratorio-para-hacking&quot;&gt;Cómo crear  un laboratorio para hacking&lt;/h1&gt;
+
+&lt;h2 id=&quot;instalación-de-virtual-box&quot;&gt;Instalación de Virtual Box&lt;/h2&gt;
 
 &lt;p&gt;El primer paso para crear nuestro laboratorio es descargarnos &lt;a href=&quot;https://www.virtualbox.org/wiki/Downloads&quot;&gt;Virtual Box&lt;/a&gt;, un software de virtualización para crear máquinas virtuales
 con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina virtual con cualquier otro sistema operativo
@@ -1067,8 +1076,8 @@ sin necesidad de crear particiones en tu propio equipo.&lt;/p&gt;
 
 &lt;p&gt;Una vez instalado, sigues estos pasos para configurar una red NAT, que usaremos en las máquinas virtuales que instalaremos más adelante. En el menú archivo de Virtual Box, elige Preferencias, y en la opción Red crear una nueva red NAT.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/preferencias.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/crear-red.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/preferencias.png&quot; alt=&quot;preferencias red Virtual Box&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/crear-red.png&quot; alt=&quot;crear red Virtual Box&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;descarga-la-imagen-kali&quot;&gt;Descarga la imagen Kali&lt;/h2&gt;
 
@@ -1083,113 +1092,113 @@ sin necesidad de crear particiones en tu propio equipo.&lt;/p&gt;
 &lt;p&gt;Una vez instalado Virtual Box y descargada la imagen de Kali, vamos a instalar Kali en nuestro equipo.
 Ejecuta el software de virtualización Virtual Box y elige la pestaña &lt;strong&gt;&lt;i&gt;Nueva&lt;/i&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali1.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali1.png&quot; alt=&quot;Instalando Kali 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A continuación da un nombre a tu máquina virtual, escribe Linux en la opción Tipo, y elige la versión de Debian (64-bit).&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali2.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali2.png&quot; alt=&quot;Instalando Kali 2&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Elige la cantidad de memoria RAM reservada para la máquina virtual según las características de tu equipo anfitrión.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali3.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali3.png&quot; alt=&quot;Instalando Kali 3&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Deja las siguientes opciones por defecto.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali4.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali4.png&quot; alt=&quot;Instalando Kali 4&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali5.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali5.png&quot; alt=&quot;Instalando Kali 5&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali6.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali6.png&quot; alt=&quot;Instalando Kali 6&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;A continuación asigna el espacio del disco duro virtual que tendrá la máquina.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali7.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali7.png&quot; alt=&quot;Instalando Kali 7&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora vamos a configurar algunos aspectos de la máquina virtual.&lt;/p&gt;
 
 &lt;p&gt;En la pestaña &lt;strong&gt;&lt;i&gt; Configuración &lt;/i&gt;&lt;/strong&gt; haz click sobre &lt;strong&gt;&lt;i&gt; Sistema &lt;/i&gt;&lt;/strong&gt; y desmarca la casilla &lt;strong&gt;&lt;i&gt;Disquete&lt;/i&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali8.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali8.png&quot; alt=&quot;Instalando Kali 8&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;En la pestaña &lt;strong&gt;&lt;i&gt; Procesador &lt;/i&gt;&lt;/strong&gt; elige el número de procesadores según las características de tu equipo anfitrión.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali9.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali9.png&quot; alt=&quot;Instalando Kali 9&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;A continuación en la opción &lt;strong&gt;&lt;i&gt; Almacenamiento &lt;/i&gt;&lt;/strong&gt; haz click sobre el icono del CD y selecciona el disco virtual óptico en la ruta de descarga de la imagen iso de Kali.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali10.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali10.png&quot; alt=&quot;Instalando Kali 10&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Una vez configurada la máquina haz click sobre la pestaña &lt;strong&gt;&lt;i&gt; Iniciar &lt;/i&gt;&lt;/strong&gt; y comenzará la instalación de Kali.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali11.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali11.png&quot; alt=&quot;Instalando Kali 11&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali12.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali12.png&quot; alt=&quot;Instalando Kali 12&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Selecciona el idioma y la ubicación.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali13.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali14.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali13.png&quot; alt=&quot;Instalando Kali 13&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali14.png&quot; alt=&quot;Instalando Kali 14&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Asigna un nombre a la máquina.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali15.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali15.png&quot; alt=&quot;Instalando Kali15&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Deja la siguiente casilla en blanco.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali16.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali16.png&quot; alt=&quot;Instalando Kali 16&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Escribe el nombre completo del usuario.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali17.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali17.png&quot; alt=&quot;Instalando Kali 17&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Y escribe el nombre del usuario para la nueva cuenta y asignale una contraseña.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali18.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali19.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali18.png&quot; alt=&quot;Instalando Kali 18&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali19.png&quot; alt=&quot;Instalando Kali 19&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Las siguiente opciones déjalas por defecto.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali20.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali21.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali22.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali23.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali24.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali20.png&quot; alt=&quot;Instalando Kali 20&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali21.png&quot; alt=&quot;Instalando Kali 21&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali22.png&quot; alt=&quot;Instalando Kali 22&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali23.png&quot; alt=&quot;Instalando Kali 23&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali24.png&quot; alt=&quot;Instalando Kali 24&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Marca la opción &lt;strong&gt;&lt;i&gt;Sí&lt;/i&gt;&lt;/strong&gt; y dale a continuar.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali25.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali25.png&quot; alt=&quot;Instalando Kali 25&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;En la siguiene panatalla deja todas las opciones por defecto y dale a continuar.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali26.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali26.png&quot; alt=&quot;Instalando Kali 26&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora marca la opción &lt;strong&gt;&lt;i&gt;Sí&lt;/i&gt;&lt;/strong&gt; y continúa con la instalación.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali27.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali27.png&quot; alt=&quot;Instalando Kali 27&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;A continuación marca la segunda opción.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali28.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali28.png&quot; alt=&quot;Instalando Kali 28&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Dale a continuar y la instalación se habrá completado.&lt;/p&gt;
 
 &lt;p&gt;Inicia sesión con el usuario de la nueva cuenta y la contraseña asignada.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali30.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali30.png&quot; alt=&quot;Instalando Kali 30&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;¡¡¡Ya tienes Kali Linux instalado en tu equipo!!!&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali31.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali31.png&quot; alt=&quot;Instalando Kali 31&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Para poder compartir el portapapeles y poder arrastrar y soltar entre el equipo anfitrión y la máquina virtualizada haz lo siguiente.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali32.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali33.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali32.png&quot; alt=&quot;Instalando Kali 32&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/maquinakali33.png&quot; alt=&quot;Instalando Kali 33&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;No te olvides de configurar el adaptador de red de la máquina. Para ello apaga la máquina y desde el menú configuración, en red selecciona la opción red NAT y como nombre la que creamos en el paso
 de instalación de Virtuabl Box.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/asignar-red.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/asignar-red.png&quot; alt=&quot;Configurando el adaptador de red en Virtual Box&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;instalación-de-la-máquina-metasploitable&quot;&gt;Instalación de la máquina Metasploitable&lt;/h2&gt;
 
@@ -1199,27 +1208,27 @@ de seguridad y practicar hacking de modo seguro. Puedes descargar la máquina de
 &lt;p&gt;Una vez descargado, descomprime el archivo y abre el software de virtualización Virtual Box. Haz click sobre la pestaña &lt;strong&gt;&lt;i&gt;Nueva&lt;/i&gt;&lt;/strong&gt; y asígnale un nombre
 a la máquina virtual. Elige Linux en la opción Tipo y como versión elige Other Linux (64-bit).&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable1.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable1.png&quot; alt=&quot;Creando máquina virtual metasploitable&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Asigna la memoria RAM según las características de tu equipo anfitrión.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable2.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable2.png&quot; alt=&quot;Asignando memoria RAM a metasploitable&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora selecciona la opción “Usar un archivo de disco duro virtual existente” y haz click sobre el icono carpeta.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable3.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable3.png&quot; alt=&quot;Creando máquina virtual metasploitable 2&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Añade el archivo con extensión .vmdk que encontrarás en la ruta donde descomprimistes el archivo .zip de metasploitable2.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable4.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable4.png&quot; alt=&quot;Creando máquina virtual metasploitable 3&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ahora ya puedes iniciar la máquina, el usuario y contraseña para acceder es &lt;strong&gt;&lt;i&gt;msfadmin&lt;/i&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable6.png&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img src=&quot;../assets/images/laboratorio/metasploitable6.png&quot; alt=&quot;Iniciando metasploitable&quot; /&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;¡¡¡ Hemos acabado !!! Ya tienes un laboratorio para realizar pruebas de seguridad y hacer Hacking de forma segura.&lt;/p&gt;
 
-&lt;p&gt;Configura el adaptador de red como hicimos en la máquina Kali.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Laboratorios" /><summary type="html">Laboratorio para pruebas de seguridad informática. Instalación y configuración Virtual Box. Instalación Kali Linux.</summary></entry><entry><title type="html">Programa #Include</title><link href="http://localhost:4000/include/" rel="alternate" type="text/html" title="Programa #Include" /><published>2021-12-16T00:00:00+01:00</published><updated>2021-12-16T00:00:00+01:00</updated><id>http://localhost:4000/include</id><content type="html" xml:base="http://localhost:4000/include/">&lt;h2 id=&quot;la-fundación-goodjob&quot;&gt;La Fundación GoodJob&lt;/h2&gt;
+&lt;p&gt;Configura el adaptador de red como hicimos en la máquina Kali.&lt;/p&gt;</content><author><name>Javier Gonzalez</name></author><category term="Laboratorios" /><summary type="html">Laboratorio para hacking. Instalación y configuración Virtual Box. Instalación Kali Linux.</summary></entry><entry><title type="html">Programa #Include</title><link href="http://localhost:4000/include/" rel="alternate" type="text/html" title="Programa #Include" /><published>2021-12-16T00:00:00+01:00</published><updated>2021-12-16T00:00:00+01:00</updated><id>http://localhost:4000/include</id><content type="html" xml:base="http://localhost:4000/include/">&lt;h1 id=&quot;la-fundación-goodjob&quot;&gt;La Fundación GoodJob&lt;/h1&gt;
 
 &lt;p&gt;La Fundación GoodJob desarrolla el Programa #Include con el objetivo de formar en seguridad informática a personas con discapacidad.
 Se trata de un programa de empleabilidad gratuito, que se desarrolla de forma online, destinado a desarrollar competencias en el sector de la ciberseguridad, 

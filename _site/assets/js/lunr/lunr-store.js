@@ -4,12 +4,12 @@ var store = [{
         "tags": ["Include"],
         "url": "http://localhost:4000/include/",
         "teaser":null},{
-        "title": "Laboratorio para hacking",
-        "excerpt":"Instalación de Virtual Box El primer paso para crear nuestro laboratorio es descargarnos Virtual Box, un software de virtualización para crear máquinas virtuales con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina virtual con cualquier otro sistema operativo...","categories": [],
+        "title": "Cómo crear un laboratorio para hacking",
+        "excerpt":"Cómo crear un laboratorio para hacking Instalación de Virtual Box El primer paso para crear nuestro laboratorio es descargarnos Virtual Box, un software de virtualización para crear máquinas virtuales con instalaciones de sistemas operativos. Esto quiere decir que si tienes un ordenador con Windows, por ejemplo, puedes crear una máquina...","categories": [],
         "tags": ["Laboratorios"],
         "url": "http://localhost:4000/laboratorio/",
         "teaser":null},{
-        "title": "Nmap",
+        "title": "Escaneo de puertos con Nmap",
         "excerpt":"¿ Qué es Nmap ? Namp (Network Mapper) es una herramienta gratuita y multiplataforma para mapear redes en busca hosts activos, puertos abiertos y servicios corriendo. Nmap viene instalado por defecto en Kali Linux. Port Scanner Como hemos mencionado, con Nmap podemos ver que puertos están abiertos en un determinado...","categories": [],
         "tags": ["Network Scanning","Herramientas","Pentesting"],
         "url": "http://localhost:4000/nmap/",
@@ -20,17 +20,17 @@ var store = [{
         "url": "http://localhost:4000/quenotelocuentem2/",
         "teaser":null},{
         "title": "Burp Suite",
-        "excerpt":"¿ Qué es Burp Suite ? Burp Suite es considerada la navaja suiza del pentester. Es una herramienta utilizada en auditorías de seguridad de aplicaciones Web. Un proxy de interceptación para el análisis y edición del tráfico Web. Con Burp Suite se pueden interceptar las peticiones y respuestas, leerlas y...","categories": [],
+        "excerpt":"¿ Qué es Burp Suite ? Burp Suite se considerada la navaja suiza del pentester. Es una herramienta utilizada en auditorías de seguridad de aplicaciones Web. Un proxy de interceptación para el análisis y edición del tráfico Web. Con Burp Suite se pueden interceptar las peticiones y respuestas, leerlas y...","categories": [],
         "tags": ["Herramientas","Proxy","Hacking Web","Pentesting"],
         "url": "http://localhost:4000/burpsuite/",
         "teaser":null},{
-        "title": "Proyecto OWASP",
+        "title": "Qué es  OWASP",
         "excerpt":"¿ Qué es el proyecto OWASP ? OWASP (Open Web Application Security Proyect), es un proyecto abierto de seguridad de aplicaciones Web. La comunidad OWASP está formada por empresas, organizaciones educativas y particulares de todo el mundo. Proporciona una base para probar los controles técnicos de seguridad de las aplicaciones...","categories": [],
         "tags": ["Artículos","Guías"],
         "url": "http://localhost:4000/quenotelocuenOwasp/",
         "teaser":null},{
         "title": "Scripting en Python I - argparse",
-        "excerpt":"Python3 - argparse Este post pretende ser una introducción al módulo argparse de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para construir procesadores de argumentos y opciones de línea de comando. Para poder usar argparse lo primero que hay que hacer es importar...","categories": [],
+        "excerpt":"Python - argparse Este post pretende ser una introducción al módulo argparse de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para construir procesadores de argumentos y opciones de línea de comando. Para poder usar argparse lo primero que hay que hacer es importar...","categories": [],
         "tags": ["Scripting"],
         "url": "http://localhost:4000/pythonI-argparse/",
         "teaser":null},{
@@ -40,12 +40,12 @@ var store = [{
         "url": "http://localhost:4000/pythonII-socket/",
         "teaser":null},{
         "title": "Scripting en Python III - requests",
-        "excerpt":"Python3 - requests Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada. Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando pip install...","categories": [],
+        "excerpt":"Python - requests Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada. Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando pip install...","categories": [],
         "tags": ["Scripting"],
         "url": "http://localhost:4000/pythonIII-requests/",
         "teaser":null},{
-        "title": "Fuzzing Aplicaciones Web",
-        "excerpt":"Fuzzing Web El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web. Existen varias herramientas...","categories": [],
+        "title": "Qué es el fuzzing",
+        "excerpt":"Qué es el fuzzing El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web. Existen...","categories": [],
         "tags": ["Hacking Web","Herramientas","Pentesting"],
         "url": "http://localhost:4000/fuzzing/",
         "teaser":null}]
