@@ -29,17 +29,17 @@ var store = [{
         "tags": ["Artículos","Guías"],
         "url": "http://localhost:4000/quenotelocuenOwasp/",
         "teaser":null},{
-        "title": "Scripting en Python I - argparse",
+        "title": "Scripting en Python argparse",
         "excerpt":"Python - argparse Este post pretende ser una introducción al módulo argparse de Python. El módulo argparse viene por defecto cuando se instala Python e incluye herramientas para construir procesadores de argumentos y opciones de línea de comando. Para poder usar argparse lo primero que hay que hacer es importar...","categories": [],
         "tags": ["Scripting"],
         "url": "http://localhost:4000/pythonI-argparse/",
         "teaser":null},{
-        "title": "Scripting en Python II - socket",
+        "title": "Scripting en Python socket",
         "excerpt":"Python3 - socket Este post pretende ser una introducción al módulo socket de Python. Socket es un módulo estándar de Python que permite conexiones TCP/IP y UDP. Varias familias de socket son compatibles con este módulo. En este post vamos a tratar con la familia AF_INET, que se utiliza para...","categories": [],
         "tags": ["Scripting"],
         "url": "http://localhost:4000/pythonII-socket/",
         "teaser":null},{
-        "title": "Scripting en Python III - requests",
+        "title": "Scripting en Python requests",
         "excerpt":"Python - requests Requests es una librería de Python para hacer peticiones HTTP, ya sea para consumir una API, extraer información de una web o enviar datos de forma automatizada. Al tratarse de una librería de terceros es necesario instalarla antes de usarla. Para ello utiliza el comando pip install...","categories": [],
         "tags": ["Scripting"],
         "url": "http://localhost:4000/pythonIII-requests/",
@@ -48,4 +48,9 @@ var store = [{
         "excerpt":"Qué es el fuzzing El fuzzing de aplicaciones web es un proceso automatizado para averiguar si una entrada proporcionada genera un resultado exitoso o extraño (la aplicación no se comporta como debe). Esto ayudará a un atacante a averiguar, por ejemplo, que rutas existen dentro de una aplicación web. Existen...","categories": [],
         "tags": ["Hacking Web","Herramientas","Pentesting"],
         "url": "http://localhost:4000/fuzzing/",
+        "teaser":null},{
+        "title": "Metasploitable FTP",
+        "excerpt":"Atacando el servicio FTP de Metasploitable En esta primera entrega de Explotando Metasploitable vamos a realizar un reconocimiento inicial de la red para descubrir hosts activos. Seguidamente iniciaremos la fase de escaneo para ver los puertos abiertos de la máquina Metasploitable, y lanzaremos nmap para descubrir los servicios y versiones...","categories": [],
+        "tags": ["Pentesting","Metasploitable"],
+        "url": "http://localhost:4000/metasploitable1/",
         "teaser":null}]

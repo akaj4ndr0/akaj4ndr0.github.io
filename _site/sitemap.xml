@@ -41,6 +41,10 @@
 <lastmod>2022-06-01T00:00:00+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/metasploitable1/</loc>
+<lastmod>2024-02-21T00:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/404/</loc>
 </url>
 <url>
@@ -63,5 +67,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/google5fe9bff7ebf8f15f.html</loc>
+<lastmod>2024-02-20T13:00:12+01:00</lastmod>
 </url>
 </urlset>

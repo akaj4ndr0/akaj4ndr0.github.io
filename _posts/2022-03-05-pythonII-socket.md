@@ -1,13 +1,14 @@
 ---
 layout: splash
-title: "Scripting en Python II - socket"
+title: "Scripting en Python socket"
 excerpt: "Módulo socket Python3." 
 date: 2022-03-05
 classes: wide
 tags:
   - Scripting
 ---
-## Python3 - socket
+<br/>
+# Python3 - socket
 
 Este post pretende ser una introducción al módulo <strong>socket</strong> de Python. Socket es un módulo estándar de Python que permite conexiones TCP/IP y UDP.
 Varias familias de socket son compatibles con este módulo. En este post vamos a tratar con la familia AF_INET, que se utiliza para designar el tipo de de direcciones 
@@ -38,7 +39,7 @@ print(dominio)
 
 El método gethostbyaddr() devulve una tupla con el nombre de dominio, los aliases y las direcciones IPs. En este caso nos interesa mostrar el nombre de dominio.
 
-<img src="../assets/images/python/socket/gethostbyaddr.png">
+<img src="../assets/images/python/socket/gethostbyaddr.png" alt="gethostbyaddr">
 
 Para obtener la IP de un dominio utilizamos el método <strong>gethostbyname()</strong>.
 
@@ -54,7 +55,7 @@ print(ip)
 
 La salida al ejecutar el script es:
 
-<img src="../assets/images/python/socket/gethostbyname.png">
+<img src="../assets/images/python/socket/gethostbyname.png" alt="hethostbyname">
 
 ## Creando nuestra primera herramienta con Socket, portScan.py
 

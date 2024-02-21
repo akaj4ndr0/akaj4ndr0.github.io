@@ -1,7 +1,7 @@
 ---
 layout: splash
-title: "Scripting en Python III - requests"
-excerpt: "Módulo requests Python3." 
+title: "Scripting en Python requests"
+excerpt: "Módulo requests Python." 
 date: 2022-03-20
 classes: wide	
 tags:
@@ -62,43 +62,43 @@ Hasta ahora hemos realizado peticiones con la librería requests. Ahora vamos a 
 
 - <strong>response.url</strong>: vemos la url solicitada
 
-<img src="../assets/images/python/requests/url.png">
+<img src="../assets/images/python/requests/url.png" alt="url solicitada">
 
-<img src="../assets/images/python/requests/r_url.png">
+<img src="../assets/images/python/requests/r_url.png" alt="lanza script url solicitada">
 
 En este caso, response.url muestra una redirección a la URL http://192.168.136.129/dvwa/login.php, ya que no hemos iniciado sesión en la aplicación. De hecho,
 a través del atributo <strong>history</strong> podemos ver los códigos de estado de la redirección.
 
-<img src="../assets/images/python/requests/history.png">
+<img src="../assets/images/python/requests/history.png" alt="history">
 
-<img src="../assets/images/python/requests/r_history.png">
+<img src="../assets/images/python/requests/r_history.png" alt="script history">
 
 Si queremos desactivar la redirección, indicamos el parámetro <strong>allow_redirects=False</strong> en la petición.
 
-<img src="../assets/images/python/requests/allow_redirects.png">
+<img src="../assets/images/python/requests/allow_redirects.png" alt="allow redirects">
 
-<img src="../assets/images/python/requests/r_allow_redirects.png">
+<img src="../assets/images/python/requests/r_allow_redirects.png" alt="script allow redirects">
 
 - <strong>response.status_code</strong>: para ver el código de respuesta de la petición	
 
-<img src="../assets/images/python/requests/status_code.png">
+<img src="../assets/images/python/requests/status_code.png" alt="status code">
 
-<img src="../assets/images/python/requests/r_status_code.png">
+<img src="../assets/images/python/requests/r_status_code.png" alt="script status code">
 
 Como se puede apreciar en la imagen el código de respuesta de la petición es exitoso y se muestra el código de respuesta 200 del servidor, aunque como se ha
 comentado antes, al no iniciar sesión en la aplicación, también se muestra una redirección a la página de login.php.
 
 - <strong>response.text</strong>: para ver la respuesta en formato texto
 
-<img src="../assets/images/python/requests/text.png">
+<img src="../assets/images/python/requests/text.png" alt="text">
 
-<img src="../assets/images/python/requests/r_text.png">
+<img src="../assets/images/python/requests/r_text.png" alt="script text">
 
 - <strong>response.headers</strong>: para ver las cabeceras de la respuesta
 
-<img src="../assets/images/python/requests/headers.png">
+<img src="../assets/images/python/requests/headers.png" alt="headers">
 
-<img src="../assets/images/python/requests/r_headers.png">
+<img src="../assets/images/python/requests/r_headers.png" alt="script headers">
 
 En la imagen anterior podemos ver tres formas de mostrar las cabeceras de la respuesta.
 

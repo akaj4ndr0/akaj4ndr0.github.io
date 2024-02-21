@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Scripting en Python I - argparse"
+title: "Scripting en Python argparse"
 excerpt: "Módulo argparse Python." 
 date: 2022-01-24
 classes: wide
